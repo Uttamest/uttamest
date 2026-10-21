@@ -1,206 +1,408 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uttam Shrestha | Software Engineer & Builder</title>
-  <meta name="description" content="Portfolio of Uttam Shrestha - Software Engineering student at Dong-eui University, mobile app developer, and full-stack builder." />
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f0f9ff',
-              500: '#0284c7',
-              600: '#0369a1',
-            }
-          }
-        }
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090f1f">
+  <meta name="description" content="Uttam Shrestha — Software Engineering student at Dong-eui University, building web applications, C++ systems, and mobile experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Uttam Shrestha | Software Engineering Portfolio">
+  <meta property="og:description" content="Selected software projects, technical skills, and experience from Uttam Shrestha.">
+  <meta property="og:url" content="https://uttamest.github.io/uttamest/">
+  <title>Uttam Shrestha | Software Engineering Portfolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090f1f;
+      --surface: #111a2d;
+      --surface-2: #152139;
+      --border: #26344c;
+      --text: #edf3ff;
+      --muted: #a0aec4;
+      --accent: #5dd6f5;
+      --accent-2: #a48eff;
+      --green: #7de2b8;
+      --radius: 20px;
     }
-  </script>
-  <!-- Phosphor Icons for crisp developer icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 94px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 760px;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 79% 22%, rgba(63, 137, 206, .17), transparent 42%),
+        radial-gradient(ellipse at 18% 8%, rgba(127, 80, 200, .11), transparent 35%);
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    ::selection { color: #071523; background: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .container { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+    .skip-link {
+      position: absolute; top: -70px; left: 20px; z-index: 200;
+      padding: 10px 16px; border-radius: 10px; background: var(--accent); color: #071523;
+    }
+    .skip-link:focus { top: 14px; }
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(9, 15, 31, .88);
+      border-bottom: 1px solid rgba(155, 177, 210, .14);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { font-size: 1.27rem; font-weight: 800; letter-spacing: -.06em; white-space: nowrap; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: .89rem; color: var(--muted); font-weight: 600; transition: color .2s; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+    .nav-links .nav-cta { border: 1px solid rgba(93, 214, 245, .42); border-radius: 11px; padding: 10px 15px; color: var(--accent); }
+    .nav-links .nav-cta:hover { background: rgba(93, 214, 245, .1); color: #fff; }
+    .menu-toggle { display: none; color: var(--text); background: transparent; border: 1px solid var(--border); border-radius: 10px; padding: 7px 12px; cursor: pointer; }
+    .hero { padding: 110px 0 103px; display: grid; grid-template-columns: 1.25fr .8fr; gap: 65px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 7px 13px; border: 1px solid rgba(125, 226, 184, .3);
+      border-radius: 999px; background: rgba(125, 226, 184, .06);
+      color: var(--green); font-size: .76rem; font-weight: 700; letter-spacing: .012em;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 15px rgba(125, 226, 184, .5); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 25px 0 22px; font-size: clamp(2.75rem, 5.15vw, 4.65rem); line-height: 1.115; letter-spacing: -.063em; font-weight: 800; }
+    .gradient-text { background: linear-gradient(98deg, #70dffa 0%, #a9adff 86%); color: transparent; -webkit-background-clip: text; background-clip: text; }
+    .hero-intro { max-width: 640px; font-size: 1.06rem; line-height: 1.9; color: var(--muted); }
+    .hero-intro strong { color: var(--text); font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 9px;
+      padding: 12px 19px; border: 1px solid transparent; border-radius: 11px;
+      font-size: .9rem; font-weight: 750; line-height: 1.4;
+      transition: transform .18s, background .18s, border-color .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #071523; box-shadow: 0 10px 38px rgba(93, 214, 245, .13); }
+    .btn-primary:hover { background: #8ae8ff; }
+    .btn-secondary { background: rgba(255,255,255,.025); border-color: var(--border); color: var(--text); }
+    .btn-secondary:hover { border-color: #5e789a; background: rgba(255,255,255,.055); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 32px; color: #92a4bf; font-size: .83rem; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-panel { position: relative; overflow: hidden; border: 1px solid #314561; border-radius: 23px; background: linear-gradient(150deg, #18243d, #0e172b 75%); box-shadow: 0 28px 85px rgba(0, 0, 0, .22); }
+    .panel-top { display: flex; align-items: center; gap: 7px; padding: 18px 21px; border-bottom: 1px solid rgba(190,208,238,.12); color: #a6b9d4; }
+    .circle { width: 9px; height: 9px; border-radius: 50%; background: #ff817c; }
+    .circle:nth-child(2) { background: #ffd36e; }
+    .circle:nth-child(3) { background: #7cddae; }
+    .panel-file { margin-left: auto; font: 600 .75rem ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .panel-code { padding: 28px 28px 12px; font: .86rem/2 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+    .code-purple { color: #b6a6ff; } .code-blue { color: #77dafa; } .code-yellow { color: #f1d18d; } .code-muted { color: #7485a1; }
+    .panel-bottom { display: flex; justify-content: space-between; gap: 16px; margin: 16px 22px 22px; padding: 16px; border-radius: 13px; background: #0b1527; border: 1px solid #233650; color: #b6c6db; font-size: .76rem; }
+    .panel-bottom strong { color: var(--green); font-weight: 700; }
+    section.content-section { padding: 45px 0 69px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 30px; }
+    .section-kicker { margin-bottom: 10px; color: var(--accent); font-size: .73rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; }
+    .section-heading h2 { margin-bottom: 9px; font-size: clamp(1.85rem, 3.2vw, 2.55rem); line-height: 1.2; letter-spacing: -.043em; }
+    .section-heading p { margin-bottom: 0; color: var(--muted); max-width: 590px; }
+    .section-link { color: var(--accent); font-size: .89rem; font-weight: 700; white-space: nowrap; padding-bottom: 5px; }
+    .section-link:hover { text-decoration: underline; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .project-card { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); transition: transform .2s, border-color .2s; }
+    .project-card:hover { transform: translateY(-4px); border-color: #57728f; }
+    .project-art { min-height: 178px; padding: 23px 25px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .art-commerce { background: radial-gradient(circle at 80% 0%, rgba(250,183,140,.17), transparent 44%), linear-gradient(125deg, #292333, #182337); }
+    .art-hospital { background: radial-gradient(circle at 15% 85%, rgba(93,214,245,.18), transparent 40%), linear-gradient(125deg, #112638, #18213a); }
+    .art-lab { background: radial-gradient(circle at 70% 20%, rgba(164,142,255,.23), transparent 42%), linear-gradient(125deg, #1a223e, #132735); }
+    .art-brain { background: radial-gradient(circle at 25% 35%, rgba(125,226,184,.13), transparent 50%), linear-gradient(125deg, #112e2d, #13213a); }
+    .mock-window { width: min(100%, 360px); border: 1px solid rgba(200,218,247,.26); border-radius: 12px; background: rgba(9,15,31,.7); box-shadow: 0 15px 40px rgba(0,0,0,.22); overflow: hidden; }
+    .mock-bar { display: flex; align-items: center; gap: 6px; padding: 10px 13px; border-bottom: 1px solid rgba(200,218,247,.13); }
+    .mock-bar span { height: 6px; width: 6px; border-radius: 50%; background: #697b98; }
+    .mock-label { margin-left: auto; color: #9aabc4; font: .65rem ui-monospace, monospace; }
+    .commerce-mini { padding: 16px; }
+    .commerce-mini b { color: #f8c9ae; font-size: .82rem; }
+    .commerce-mini p { color: #b6b6c8; font-size: .7rem; margin: 3px 0 12px; }
+    .product-shapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+    .product-shapes span { display: block; height: 44px; border-radius: 6px; background: linear-gradient(135deg, #a77970, #e1bda3); opacity: .85; }
+    .product-shapes span:nth-child(2) { background: linear-gradient(135deg, #af8a96, #e5bdc5); }
+    .product-shapes span:nth-child(3) { background: linear-gradient(135deg, #8c7d91, #bfb3be); }
+    .terminal-mini { padding: 14px 18px 18px; font: .75rem/1.8 ui-monospace, monospace; }
+    .terminal-mini .good { color: var(--green); } .terminal-mini .quiet { color: #a4b9d4; }
+    .lab-mini { padding: 20px; text-align: center; }
+    .lab-mini strong { font-size: .96rem; color: #d2c9ff; }
+    .lab-mini p { margin: 8px 0 12px; color: #b1c0d5; font-size: .73rem; }
+    .mock-pills { display: flex; gap: 7px; justify-content: center; flex-wrap: wrap; }
+    .mock-pills span { border: 1px solid #41536c; border-radius: 50px; padding: 4px 8px; color: #bad1e4; font-size: .67rem; }
+    .project-content { padding: 25px 26px 27px; }
+    .project-label { color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .project-card h3 { margin: 10px 0; font-size: 1.24rem; letter-spacing: -.025em; line-height: 1.3; }
+    .project-card p { margin-bottom: 14px; color: var(--muted); font-size: .88rem; line-height: 1.75; }
+    .contribution { padding-left: 13px; margin: 15px 0; border-left: 2px solid #4d7695; color: #c8d5e9; font-size: .8rem; line-height: 1.6; }
+    .contribution strong { color: var(--text); }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 19px 0; }
+    .tag { border: 1px solid #304259; border-radius: 7px; padding: 4px 9px; color: #b6c8df; background: #19263c; font-size: .7rem; font-weight: 600; }
+    .project-link { display: inline-block; font-size: .88rem; font-weight: 750; color: var(--accent); }
+    .project-link:hover { text-decoration: underline; }
+    .note { color: #8598b6; font-size: .77rem; }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 26px; }
+    .info-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 28px; }
+    .info-card h3 { font-size: 1.1rem; margin-bottom: 12px; letter-spacing: -.02em; }
+    .info-card p { color: var(--muted); font-size: .93rem; margin-bottom: 0; }
+    .skill-group + .skill-group { margin-top: 24px; }
+    .skill-group h4 { color: #e0e9f9; margin: 0 0 9px; font-size: .81rem; font-weight: 750; }
+    .skill-group .tags { margin: 0; }
+    .timeline { position: relative; padding-left: 25px; border-left: 1px solid #31425c; margin-left: 8px; }
+    .timeline-item { position: relative; padding: 0 0 30px 0; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before { content: ""; position: absolute; top: 7px; left: -31px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--bg); }
+    .timeline-item:nth-child(2)::before { background: var(--accent-2); }
+    .timeline-item h3 { margin: 0 0 3px; font-size: 1.06rem; }
+    .timeline-meta { color: var(--accent); font-size: .78rem; font-weight: 650; margin: 0 0 7px; }
+    .timeline-item p:last-child { color: var(--muted); font-size: .9rem; margin-bottom: 0; }
+    .contact-section { padding: 48px 0 90px; }
+    .contact-panel { position: relative; overflow: hidden; text-align: center; border-radius: 24px; border: 1px solid #3b5878; padding: 63px 25px; background: radial-gradient(circle at 50% 0%, rgba(93,214,245,.11), transparent 55%), #111d32; }
+    .contact-panel h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.045em; margin: 8px 0 12px; line-height: 1.2; }
+    .contact-panel p { color: var(--muted); max-width: 600px; margin: 0 auto 25px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 11px; justify-content: center; }
+    .email-address { display: block; margin-top: 17px; font-size: .84rem; color: #a3b8d0; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid #1e2b40; padding: 24px 0 30px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; color: #8495b0; font-size: .78rem; }
+    @media (max-width: 890px) {
+      .hero { grid-template-columns: 1fr; gap: 35px; padding: 79px 0 67px; }
+      .hero-panel { max-width: 560px; }
+      .project-grid, .about-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 18px; }
+    }
+    @media (max-width: 610px) {
+      .container { width: min(100% - 34px, 1120px); }
+      .nav-wrap { min-height: 68px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 16px 20px 20px; flex-direction: column; align-items: stretch; gap: 4px; border-bottom: 1px solid var(--border); background: #0d1729; }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { padding: 11px 12px; }
+      .nav-links .nav-cta { margin-top: 6px; text-align: center; }
+      .hero { padding-top: 60px; }
+      h1 { font-size: clamp(2.45rem, 10vw, 3.5rem); }
+      .hero-intro { font-size: .98rem; }
+      .hero-actions .btn { flex: 1; }
+      .hero-meta { gap: 9px 20px; }
+      .section-heading { flex-direction: column; align-items: start; }
+      section.content-section { padding: 35px 0 48px; }
+      .project-content { padding: 22px; }
+      .contact-panel { padding: 50px 18px; }
+      .footer-inner { flex-direction: column; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
-
-  <!-- Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="font-bold text-lg tracking-tight hover:text-sky-400 transition-colors">
-        uttam<span class="text-sky-400">.dev</span>
-      </a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-white transition-colors">About</a>
-        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-        <a href="#contact" class="px-3.5 py-1.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 hover:bg-sky-500 hover:text-white transition-all">Get in Touch</a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Uttam Shrestha, back to top">uttam<span>.dev</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰ Menu</button>
+      <nav class="nav-links" id="site-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cta" href="#contact">Let's connect ↗</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-28">
-
-    <!-- Hero Section -->
-    <section class="space-y-6 pt-8">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        Open to Software Engineering & Mobile Dev Opportunities
-      </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-        Building cross-platform apps & reliable web systems.
-      </h1>
-      <p class="text-lg sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
-        I’m <span class="text-white font-medium">Uttam Shrestha</span>, a Software Engineering student at <span class="text-white font-medium">Dong-eui University</span> in Busan, originally from Nepal. I bridge technical architecture with real-world operations—from campus mobile communities to hotel reservation platforms.
-      </p>
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="#projects" class="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-medium transition-all shadow-lg shadow-sky-500/20">
-          View Projects
-        </a>
-        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium border border-slate-700/60 transition-all flex items-center gap-2">
-          <i class="ph ph-github-logo text-lg"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer" class="px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium border border-slate-700/60 transition-all flex items-center gap-2">
-          <i class="ph ph-linkedin-logo text-lg"></i> LinkedIn
-        </a>
-      </div>
-    </section>
-
-    <!-- Skills & Tech Stack -->
-    <section class="space-y-6">
-      <h2 class="text-xl font-bold tracking-tight text-slate-200">Technologies & Core Competencies</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-          <p class="text-xs font-semibold uppercase tracking-wider text-sky-400">Mobile</p>
-          <p class="text-slate-200 font-medium text-sm">React Native, Flutter, Expo, Mobile UI/UX</p>
+  <main id="main">
+    <div class="container" id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Open to software engineering opportunities</span>
+          <h1 id="hero-title">Hi, I'm Uttam.<br><span class="gradient-text">I build useful software.</span></h1>
+          <p class="hero-intro">
+            I'm <strong>Uttam Shrestha</strong>, a Software Engineering undergraduate at
+            <strong>Dong-eui University</strong> in Busan, South Korea, originally from Nepal.
+            I enjoy creating practical applications — from web-based business tools and C++ systems
+            to mobile experiences for student communities.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="mailto:uttamnitro5@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>⌖ Busan, South Korea</span>
+            <span>◇ Web · Mobile · C++</span>
+          </div>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-          <p class="text-xs font-semibold uppercase tracking-wider text-sky-400">Frontend</p>
-          <p class="text-slate-200 font-medium text-sm">JavaScript (ES6+), TypeScript, React, Tailwind CSS</p>
+        <div class="hero-panel" aria-label="A decorative developer introduction card">
+          <div class="panel-top"><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="panel-file">about-me.js</span></div>
+          <div class="panel-code" aria-hidden="true">
+            <div><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</div>
+            <div>&nbsp;&nbsp;name: <span class="code-yellow">"Uttam Shrestha"</span>,</div>
+            <div>&nbsp;&nbsp;location: <span class="code-yellow">"Busan, KR"</span>,</div>
+            <div>&nbsp;&nbsp;focus: [</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-yellow">"Web development"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-yellow">"Mobile applications"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-yellow">"Problem solving"</span></div>
+            <div>&nbsp;&nbsp;],</div>
+            <div>&nbsp;&nbsp;mindset: <span class="code-yellow">"Keep building"</span></div>
+            <div>}; <span class="code-muted">// let's connect</span></div>
+          </div>
+          <div class="panel-bottom"><span>Currently learning &amp; building</span><strong>● Active</strong></div>
         </div>
-        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-          <p class="text-xs font-semibold uppercase tracking-wider text-sky-400">Backend & DB</p>
-          <p class="text-slate-200 font-medium text-sm">Python, RESTful APIs, Node.js, SQLite, PostgreSQL</p>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
-          <p class="text-xs font-semibold uppercase tracking-wider text-sky-400">Workflow & Ops</p>
-          <p class="text-slate-200 font-medium text-sm">Git, GitHub, PMS/Reservation Systems, Automation</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="space-y-8">
-      <div class="space-y-1">
-        <h2 class="text-2xl font-bold tracking-tight text-white">Featured Projects</h2>
-        <p class="text-slate-400 text-sm">Production apps and field-tested technical systems.</p>
-      </div>
+    <section class="content-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">01 / Selected work</div>
+            <h2 id="projects-title">Projects &amp; what I contributed</h2>
+            <p>Real coursework repositories first, followed by projects and ideas I'm developing.</p>
+          </div>
+          <a class="section-link" href="https://github.com/Uttamest" target="_blank" rel="noopener noreferrer">All GitHub repositories ↗</a>
+        </div>
 
-      <div class="space-y-6">
-        <!-- Project 1: Living Lab Community App -->
-        <article class="p-6 sm:p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-slate-700 transition-all space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">Dong-eui Living Lab Initiative</span>
-            <div class="flex items-center gap-3 text-slate-400 text-sm">
-              <a href="#" class="hover:text-white flex items-center gap-1 transition-colors"><i class="ph ph-github-logo"></i> Code</a>
-              <a href="#" class="hover:text-white flex items-center gap-1 transition-colors"><i class="ph ph-arrow-square-out"></i> Case Study</a>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art art-commerce" aria-hidden="true">
+              <div class="mock-window">
+                <div class="mock-bar"><span></span><span></span><span></span><span class="mock-label">alme-pahiran / storefront</span></div>
+                <div class="commerce-mini"><b>ALME PAHIRAN</b><p>Traditional Nepali clothing &amp; accessories</p><div class="product-shapes"><span></span><span></span><span></span></div></div>
+              </div>
             </div>
-          </div>
-          <h3 class="text-xl font-bold text-white">Global Student Campus Navigator & Community App</h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            A comprehensive mobile solution developed under the university Living Lab program to tackle assimilation challenges faced by international students in South Korea. Integrates localized FAQ directories, visa & academic procedures, bilingual translation prompts, and peer support forums.
-          </p>
-          <div class="space-y-2 text-xs text-slate-400">
-            <p><strong class="text-slate-300">Key Engineering Features:</strong> Context-aware FAQ search indexing, localized bilingual UI/UX workflows, offline-ready emergency guidelines, and low-latency community discussion feeds.</p>
-          </div>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">React Native / Flutter</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">TypeScript</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">REST API</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">User Centered Design</span>
-          </div>
-        </article>
-
-        <!-- Project 2: BrainLoop -->
-        <article class="p-6 sm:p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-slate-700 transition-all space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Startup Idea Contest Finalist</span>
-            <div class="flex items-center gap-3 text-slate-400 text-sm">
-              <a href="#" class="hover:text-white flex items-center gap-1 transition-colors"><i class="ph ph-github-logo"></i> Code</a>
-              <a href="#" class="hover:text-white flex items-center gap-1 transition-colors"><i class="ph ph-arrow-square-out"></i> Prototype</a>
+            <div class="project-content">
+              <div class="project-label">Web application · Team project</div>
+              <h3>AlMe Pahiran — E-commerce Website</h3>
+              <p>A PHP and MySQL storefront for traditional Nepali fashion, with customer accounts, product catalog, cart, order requests and an admin dashboard. Checkout uses a manual order-request workflow, not an online payment gateway.</p>
+              <div class="contribution"><strong>My role — Team Leader:</strong> Homepage, checkout workflow, database setup, admin dashboard and project integration.</div>
+              <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Sessions</span></div>
+              <a class="project-link" href="https://github.com/Uttamest/alme-pahiran" target="_blank" rel="noopener noreferrer" aria-label="View AlMe Pahiran source code on GitHub">View repository ↗</a>
             </div>
-          </div>
-          <h3 class="text-xl font-bold text-white">BrainLoop: Intelligent Active Recall & Spaced Repetition Engine</h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            AI-assisted flashcard application designed to eliminate manual deck creation friction. Automatically converts academic transcripts and technical notes into atomic question-and-answer decks utilizing an adaptive retention algorithm.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">React Native</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">Python (FastAPI)</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">SQLite</span>
-            <span class="text-xs font-mono text-slate-400 px-2 py-1 rounded bg-slate-800/80">LLM Prompt Pipelines</span>
-          </div>
-        </article>
-      </div>
-    </section>
+          </article>
 
-    <!-- Experience & Practical Background -->
-    <section id="experience" class="space-y-8">
-      <div class="space-y-1">
-        <h2 class="text-2xl font-bold tracking-tight text-white">Experience & Background</h2>
-        <p class="text-slate-400 text-sm">Combining operational hospitality systems with software engineering.</p>
-      </div>
+          <article class="project-card">
+            <div class="project-art art-hospital" aria-hidden="true">
+              <div class="mock-window">
+                <div class="mock-bar"><span></span><span></span><span></span><span class="mock-label">hospital_scheduler.exe</span></div>
+                <div class="terminal-mini"><div class="good">&gt; Hospital Scheduling System</div><div class="quiet">[1] Manage doctors &amp; patients</div><div class="quiet">[2] Create / cancel appointment</div><div class="quiet">[3] View schedules</div><div class="good">&gt; Ready for input_</div></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-label">C++ application · Team project</div>
+              <h3>Hospital Scheduling System</h3>
+              <p>A command-line appointment manager that tracks doctors, patients and appointments. Includes scheduling conflict prevention, schedule views, file-based persistence and object-oriented design.</p>
+              <div class="contribution"><strong>My role — Team Leader:</strong> CLI menus, input handling and validation, module integration, build setup and final testing.</div>
+              <div class="tags"><span class="tag">C++17</span><span class="tag">OOP</span><span class="tag">File I/O</span><span class="tag">CLI</span><span class="tag">Git</span></div>
+              <a class="project-link" href="https://github.com/Uttamest/hospital-scheduling-system" target="_blank" rel="noopener noreferrer" aria-label="View Hospital Scheduling System source code on GitHub">View repository ↗</a>
+            </div>
+          </article>
 
-      <div class="border-l border-slate-800 pl-6 space-y-8">
-        <!-- Education -->
-        <div class="relative space-y-2">
-          <div class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-sky-500 ring-4 ring-slate-950"></div>
-          <div class="flex flex-wrap justify-between items-baseline gap-2">
-            <h3 class="text-base font-semibold text-white">B.S. in Software Engineering (지능형컴퓨팅학과)</h3>
-            <span class="text-xs font-mono text-slate-500">Dong-eui University • Busan, South Korea</span>
-          </div>
-          <p class="text-slate-400 text-sm">
-            Focusing on software architecture, algorithms, data structures, and cross-platform systems. Actively taking part in university startup initiatives and collaborative Living Lab projects.
-          </p>
+          <article class="project-card">
+            <div class="project-art art-lab" aria-hidden="true">
+              <div class="mock-window"><div class="mock-bar"><span></span><span></span><span></span><span class="mock-label">living-lab / ongoing</span></div><div class="lab-mini"><strong>Campus connections</strong><p>Helping international students navigate university life</p><div class="mock-pills"><span>Campus info</span><span>Community</span><span>Mobile UX</span></div></div></div>
+            </div>
+            <div class="project-content">
+              <div class="project-label">Mobile experience · In progress</div>
+              <h3>International Student Community App</h3>
+              <p>Ongoing university Living Lab work exploring a mobile experience that makes campus information and student-to-student support more accessible to international students in South Korea.</p>
+              <div class="tags"><span class="tag">Mobile UX</span><span class="tag">Student experience</span><span class="tag">Living Lab</span></div>
+              <div class="note">Development in progress · Public project link not yet provided</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art art-brain" aria-hidden="true">
+              <div class="mock-window"><div class="mock-bar"><span></span><span></span><span></span><span class="mock-label">brainloop / concept</span></div><div class="lab-mini"><strong>BrainLoop</strong><p>From study notes to active recall</p><div class="mock-pills"><span>Flashcards</span><span>Study habits</span><span>AI exploration</span></div></div></div>
+            </div>
+            <div class="project-content">
+              <div class="project-label">Learning technology · Concept</div>
+              <h3>BrainLoop — Smart Study Companion</h3>
+              <p>An AI-assisted learning concept exploring how study notes could be transformed into active-recall flashcards and reviewed using spaced repetition.</p>
+              <div class="tags"><span class="tag">Product concept</span><span class="tag">Active recall</span><span class="tag">AI exploration</span></div>
+              <div class="note">Concept from my earlier portfolio · Public project link not yet provided</div>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <!-- Operations / Front Desk -->
-        <div class="relative space-y-2">
-          <div class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-600 ring-4 ring-slate-950"></div>
-          <div class="flex flex-wrap justify-between items-baseline gap-2">
-            <h3 class="text-base font-semibold text-white">Front Desk Operations & Reservation Systems Lead</h3>
-            <span class="text-xs font-mono text-slate-500">Hospitality • South Korea</span>
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-kicker">02 / Background</div><h2 id="about-title">A little about me</h2></div>
+        </div>
+        <div class="about-grid">
+          <div class="info-card">
+            <h3>Engineering with a practical perspective</h3>
+            <p>I enjoy understanding how software is used in real situations, not just how it is written. University team projects have helped me practice building applications, integrating different modules, and collaborating through GitHub. My experience with hospitality and reservation workflows also shapes how I think about clear interfaces, reliability, and the people using a system.</p>
           </div>
-          <p class="text-slate-400 text-sm">
-            Overseeing Property Management Systems (PMS), room allocation algorithms, multilingual guest communications (Korean, English, Nepali), and resolving real-time operational contingencies under high-traffic conditions.
-          </p>
+          <div class="info-card" id="skills">
+            <h3>Technical toolkit</h3>
+            <div class="skill-group"><h4>Languages &amp; web</h4><div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">PHP</span><span class="tag">HTML &amp; CSS</span><span class="tag">JavaScript</span></div></div>
+            <div class="skill-group"><h4>Mobile &amp; areas of exploration</h4><div class="tags"><span class="tag">React Native</span><span class="tag">Flutter</span><span class="tag">Mobile UI/UX</span></div></div>
+            <div class="skill-group"><h4>Databases &amp; tools</h4><div class="tags"><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">Git &amp; GitHub</span><span class="tag">VS Code</span></div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Footer -->
-    <section id="contact" class="p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 text-center space-y-6">
-      <div class="max-w-xl mx-auto space-y-2">
-        <h2 class="text-2xl font-bold text-white">Let’s build something together.</h2>
-        <p class="text-slate-400 text-sm">
-          Whether you’re interested in collaborating on an app, discussing software engineering opportunities in Korea or internationally, feel free to reach out.
-        </p>
+    <section class="content-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading"><div><div class="section-kicker">03 / Experience</div><h2 id="experience-title">Education &amp; experience</h2><p>Combining technical study with hands-on operational experience.</p></div></div>
+        <div class="timeline">
+          <div class="timeline-item"><h3>Software Engineering Undergraduate</h3><p class="timeline-meta">Dong-eui University · Busan, South Korea</p><p>Studying software development, data structures and problem solving, while contributing to collaborative programming projects and university initiatives.</p></div>
+          <div class="timeline-item"><h3>Hospitality &amp; Front Desk Operations</h3><p class="timeline-meta">South Korea · Practical work experience</p><p>Experience working with reservations, property management systems and guest communication. These workflows provide real-world context for thinking about software usability and dependable processes.</p></div>
+        </div>
       </div>
-      <div class="flex justify-center gap-4">
-        <a href="mailto:your-email@example.com" class="px-6 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-medium text-sm transition-all shadow-lg shadow-sky-500/20">
-          Send Email
-        </a>
-        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer" class="px-6 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm transition-all border border-slate-700">
-          GitHub Profile
-        </a>
-      </div>
-      <p class="text-xs text-slate-600 pt-4">© Uttam Shrestha. Hosted on GitHub Pages.</p>
     </section>
 
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="section-kicker">04 / Contact</div>
+          <h2 id="contact-title">Let's build something useful.</h2>
+          <p>I'm interested in software engineering opportunities, internships and collaborating on practical products. Feel free to reach out.</p>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:uttamnitro5@gmail.com">✉ Send me an email</a>
+            <a class="btn btn-secondary" href="https://github.com/Uttamest" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/mruttam/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+          <a class="email-address" href="mailto:uttamnitro5@gmail.com">uttamnitro5@gmail.com</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Uttam Shrestha. All rights reserved.</span><span>Built with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</span></div></footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('#site-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      siteNav.classList.toggle('is-open', !isOpen);
+    });
+    siteNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
