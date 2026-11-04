@@ -1,29 +1,29 @@
 # Hi, I'm Uttam Shrestha 👋
 
-### Intelligent Computing Undergraduate | Mobile & Full-Stack Developer
+### Intelligent Computing Undergraduate | Software Developer
 
-🎓 Studying at **Dong-eui University, Busan, South Korea** 🇰🇷  
-🌏 Originally from **Nepal** 🇳🇵
+🎓 **Dong-eui University** · Busan, South Korea 🇰🇷  
+🌏 Originally from Nepal 🇳🇵
 
-I'm an undergraduate developer interested in building practical, user-focused software. My main areas of interest include cross-platform mobile development, web applications, and software solutions that address real-world problems.
+I'm an undergraduate developer interested in building practical, user-centered software that solves real-world problems. My interests span **cross-platform mobile development, full-stack application development, and software engineering**.
 
-I enjoy learning new technologies, experimenting with ideas, and turning them into useful projects.
+I enjoy exploring new technologies, developing ideas into working applications, and continuously improving my problem-solving and engineering skills.
 
 ---
 
-## 🚀 What I'm Working On
+## 🚀 Current Focus
 
-- 📱 **Mobile Development:** Exploring cross-platform application development with React Native and Flutter.
-- 🌐 **Web Development:** Building interactive browser-based applications and practical web tools.
-- 🏛️ **Campus Innovation:** Contributing to a Living Lab project focused on improving communication and support for international students.
-- ⚙️ **Workflow Improvement:** Exploring software solutions for reservation and property-management workflows.
-- 🧠 **Computer Science:** Strengthening my knowledge of data structures, algorithms, Python, and software engineering fundamentals.
+- 📱 **Mobile Development** — Exploring cross-platform application development with React Native and Flutter.
+- 🌐 **Web Development** — Building responsive web applications and interactive browser-based tools.
+- 🏫 **Campus Innovation** — Contributing to a university Living Lab initiative focused on improving communication and support for international students.
+- ⚙️ **Workflow Automation** — Exploring software solutions that simplify repetitive tasks and improve everyday operations.
+- 🧩 **Computer Science** — Strengthening my foundations in data structures, algorithms, Python, and software engineering.
 
 ---
 
 ## 🛠️ Technologies & Tools
 
-**Languages**
+**Programming Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -36,7 +36,7 @@ I enjoy learning new technologies, experimenting with ideas, and turning them in
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-**Database & Development Tools**
+**Databases & Development Tools**
 
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
@@ -45,32 +45,51 @@ I enjoy learning new technologies, experimenting with ideas, and turning them in
 
 ---
 
-## 💻 Projects & Interests
+## 💡 Featured Projects
 
-I'm interested in developing software that is useful, accessible, and built around real user needs.
+### 🧠 [BrainLoop — Learn it. Keep it.](https://uttamest.github.io/brainloop/)
 
-Some areas I'm exploring:
+A browser-based flashcard application designed to make learning more effective through active recall and spaced repetition.
 
-- **BrainLoop:** A browser-based flashcard application designed around active recall, spaced repetition, and progress tracking.
-- **Campus Community Solutions:** Digital tools to make university information and support more accessible to international students.
-- **Workflow Automation:** Practical software ideas for simplifying repetitive tasks and improving everyday workflows.
+**Key Features**
+- Create, organize, edit, and manage flashcard decks.
+- Review cards using a simple self-assessment system.
+- Schedule reviews with a tiered interval-based approach.
+- Track learning progress directly in the browser.
+- Import and export study data using JSON.
 
-Explore my repositories to see what I'm building and learning.
+**Tech:** HTML · CSS · JavaScript · Browser Storage
+
+---
+
+### 🏫 Campus Community Solutions
+
+Exploring digital solutions through a university Living Lab initiative, with a focus on making campus information, communication, and support more accessible to international students.
+
+---
+
+### ⚙️ Workflow Automation
+
+Exploring practical software ideas for simplifying repetitive administrative tasks and improving everyday reservation and property-management workflows.
+
+---
+
+I'm continuously learning and developing new projects. Check out my repositories to follow my progress and explore what I'm building.
 
 ---
 
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="Uttam's GitHub statistics" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=uttamest&layout=compact&theme=tokyonight&hide_border=true" alt="Most-used programming languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub contribution statistics" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=uttamest&layout=compact&theme=tokyonight&hide_border=true" alt="Most-used languages on GitHub" />
 </p>
 
 ---
 
-## 🤝 Let's Connect
+## 🤝 Connect With Me
 
-I'm always interested in connecting with developers, exchanging ideas, and learning from people building meaningful projects.
+I'm always happy to connect with fellow developers, exchange ideas, collaborate on interesting projects, and learn from the developer community.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/uttamest)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
@@ -80,5 +99,5 @@ I'm always interested in connecting with developers, exchanging ideas, and learn
 ---
 
 <p align="center">
-  <i>"Building, learning, and improving — one project at a time."</i>
+  <i>Building meaningful things through curiosity, creativity, and continuous learning.</i>
 </p>
