@@ -5,23 +5,25 @@
 🎓 **Dong-eui University** · Busan, South Korea 🇰🇷  
 🌏 Originally from **Nepal** 🇳🇵
 
-I'm an undergraduate developer passionate about building practical, user-centered software that addresses real-world needs. My interests include **cross-platform mobile development, full-stack application development, and software engineering**.
+I'm an Intelligent Computing undergraduate with a strong interest in software development and building technology that solves practical, real-world problems.
 
-I enjoy turning ideas into functional applications, exploring emerging technologies, and continuously strengthening my technical and problem-solving skills through hands-on projects.
+My areas of interest include **cross-platform mobile development, full-stack application development, and software engineering**. I enjoy transforming ideas into functional applications, exploring new technologies, and continuously improving my programming and problem-solving skills through hands-on projects.
 
----
-
-## 🚀 What I'm Working On
-
-- 📱 **Cross-Platform Mobile Development** — Exploring mobile application development with React Native and Flutter.
-- 🌐 **Web Development** — Building responsive web applications and interactive browser-based tools.
-- 🏫 **Campus Innovation** — Contributing to a university Living Lab initiative focused on improving communication and support for international students.
-- ⚙️ **Workflow Automation** — Exploring practical software solutions to streamline repetitive tasks and improve everyday operations.
-- 🧩 **Computer Science Foundations** — Strengthening my knowledge of data structures, algorithms, Python, and software engineering principles.
+I'm particularly interested in creating practical, user-centered solutions that make everyday tasks simpler, more accessible, and more efficient.
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Current Focus
+
+- **Cross-Platform Development** — Exploring mobile application development with React Native and Flutter.
+- **Web Application Development** — Building responsive websites, interactive applications, and browser-based tools.
+- **Campus Innovation** — Contributing to a university Living Lab initiative focused on improving communication and support services for international students.
+- **Workflow Automation** — Exploring software solutions to simplify repetitive processes and improve operational efficiency.
+- **Computer Science Fundamentals** — Strengthening my understanding of data structures, algorithms, Python programming, and software engineering principles.
+
+---
+
+## 🛠️ Technologies & Tools
 
 ### Programming Languages
 
@@ -45,39 +47,46 @@ I enjoy turning ideas into functional applications, exploring emerging technolog
 
 ---
 
-## 💻 Selected Projects
+## 💻 Featured Project
 
 ### 🧠 [BrainLoop — Learn it. Keep it.](https://uttamest.github.io/brainloop/)
 
-**A browser-based flashcard application built to support effective learning through active recall and spaced repetition.**
+**An interactive flashcard application designed to make learning more effective through active recall and spaced repetition.**
 
-BrainLoop helps learners create personalized study decks, review information, and monitor their learning progress through a simple, responsive interface.
+BrainLoop is a browser-based study application that allows learners to create personalized flashcard decks, organize study materials, review information, and monitor their learning progress through a clean and responsive interface.
 
 **Key Features**
+
 - Create, edit, organize, and manage custom flashcard decks.
-- Study using interactive cards and self-assessment.
-- Schedule reviews with a tiered interval-based system.
-- Track study progress using browser storage.
-- Import and export study data in JSON format.
+- Practice active recall with interactive question-and-answer cards.
+- Rate learning progress to guide future reviews.
+- Schedule reviews using a tiered interval-based system.
+- Track study activity with browser-based data storage.
+- Import and export decks using JSON files.
+- Access the application through a responsive interface.
 
 **Technologies:** HTML · CSS · JavaScript · Browser Storage
 
+**[🌐 Live Application](https://uttamest.github.io/brainloop/) · [💻 Source Code](https://github.com/uttamest/brainloop)**
+
 ---
+
+## 🌱 Ongoing Initiatives & Exploration
 
 ### 🏫 Campus Community Solutions
 
-Exploring digital solutions as part of a university Living Lab initiative, with an emphasis on improving access to campus information, communication, and support services for international students.
+Contributing to a university Living Lab initiative exploring digital solutions for the international student community. The focus is on improving access to campus information, strengthening communication, and making student support services more accessible.
 
 ### ⚙️ Workflow Automation
 
-Exploring software-driven approaches to simplify repetitive administrative processes and improve everyday reservation and property-management workflows.
+Exploring software-driven approaches to streamline repetitive administrative tasks and improve everyday operational workflows, with an interest in practical applications for reservation and property management processes.
 
 ---
 
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="Uttam's GitHub statistics" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub contribution statistics" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=uttamest&layout=compact&theme=tokyonight&hide_border=true" alt="Most-used programming languages" />
 </p>
 
@@ -85,7 +94,7 @@ Exploring software-driven approaches to simplify repetitive administrative proce
 
 ## 🤝 Let's Connect
 
-I'm always interested in connecting with fellow developers, exchanging ideas, learning from others, and collaborating on meaningful projects.
+I'm always interested in connecting with developers, exchanging ideas, learning from different perspectives, and collaborating on meaningful projects.
 
 <p>
   <a href="https://github.com/uttamest">
