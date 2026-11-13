@@ -1,25 +1,23 @@
 # Hi, I'm Uttam Shrestha 👋
 
-### Intelligent Computing Undergraduate | Aspiring Software Developer
+### Intelligent Computing Undergraduate | Software Developer
 
 🎓 **Dong-eui University** · Busan, South Korea 🇰🇷  
 🌏 Originally from **Nepal** 🇳🇵
 
-I'm an Intelligent Computing undergraduate with a strong interest in software development and building technology that solves practical, real-world problems.
+I'm an Intelligent Computing undergraduate interested in designing and developing software that solves practical, real-world problems. I enjoy turning ideas into functional applications, exploring different technologies, and improving my skills through hands-on development.
 
-My areas of interest include **cross-platform mobile development, full-stack application development, and software engineering**. I enjoy transforming ideas into functional applications, exploring new technologies, and continuously improving my programming and problem-solving skills through hands-on projects.
-
-I'm particularly interested in creating practical, user-centered solutions that make everyday tasks simpler, more accessible, and more efficient.
+My interests span **cross-platform mobile development, full-stack application development, and software engineering**. I’m particularly drawn to building intuitive, user-centered solutions that make everyday tasks simpler, more accessible, and more efficient.
 
 ---
 
-## 🚀 Current Focus
+## 🚀 What I'm Focused On
 
-- **Cross-Platform Development** — Exploring mobile application development with React Native and Flutter.
-- **Web Application Development** — Building responsive websites, interactive applications, and browser-based tools.
+- **Mobile Application Development** — Exploring cross-platform development with React Native and Flutter.
+- **Web Development** — Building responsive websites, interactive applications, and browser-based tools.
 - **Campus Innovation** — Contributing to a university Living Lab initiative focused on improving communication and support services for international students.
-- **Workflow Automation** — Exploring software solutions to simplify repetitive processes and improve operational efficiency.
-- **Computer Science Fundamentals** — Strengthening my understanding of data structures, algorithms, Python programming, and software engineering principles.
+- **Workflow Automation** — Exploring software solutions that streamline repetitive tasks and improve operational efficiency.
+- **Computer Science Fundamentals** — Strengthening my knowledge of data structures, algorithms, Python, and software engineering principles.
 
 ---
 
@@ -38,7 +36,7 @@ I'm particularly interested in creating practical, user-centered solutions that 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-### Databases & Development Tools
+### Databases & Developer Tools
 
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
@@ -51,42 +49,42 @@ I'm particularly interested in creating practical, user-centered solutions that 
 
 ### 🧠 [BrainLoop — Learn it. Keep it.](https://uttamest.github.io/brainloop/)
 
-**An interactive flashcard application designed to make learning more effective through active recall and spaced repetition.**
+**An interactive flashcard application built around active recall and spaced repetition.**
 
-BrainLoop is a browser-based study application that allows learners to create personalized flashcard decks, organize study materials, review information, and monitor their learning progress through a clean and responsive interface.
+BrainLoop is a browser-based learning application that helps users create personalized flashcard decks, organize study materials, review concepts, and monitor their learning progress through a clean, responsive interface.
 
-**Key Features**
+**Highlights**
 
-- Create, edit, organize, and manage custom flashcard decks.
+- Create, edit, organize, and manage personalized flashcard decks.
 - Practice active recall with interactive question-and-answer cards.
-- Rate learning progress to guide future reviews.
-- Schedule reviews using a tiered interval-based system.
-- Track study activity with browser-based data storage.
-- Import and export decks using JSON files.
-- Access the application through a responsive interface.
+- Rate your recall performance to guide future review sessions.
+- Schedule reviews using a tiered, interval-based system.
+- Track study progress with browser-based data storage.
+- Import and export flashcard decks using JSON files.
+- Use the application across desktop and mobile screen sizes.
 
-**Technologies:** HTML · CSS · JavaScript · Browser Storage
+**Built with:** HTML · CSS · JavaScript · Browser Storage
 
-**[🌐 Live Application](https://uttamest.github.io/brainloop/) · [💻 Source Code](https://github.com/uttamest/brainloop)**
+[🌐 Live Application](https://uttamest.github.io/brainloop/) · [💻 Source Code](https://github.com/uttamest/brainloop)
 
 ---
 
-## 🌱 Ongoing Initiatives & Exploration
+## 🌱 Initiatives & Areas of Exploration
 
-### 🏫 Campus Community Solutions
+### 🏫 Improving the International Student Experience
 
-Contributing to a university Living Lab initiative exploring digital solutions for the international student community. The focus is on improving access to campus information, strengthening communication, and making student support services more accessible.
+Contributing to a university Living Lab initiative that explores digital solutions for the international student community. The initiative focuses on improving access to campus information, strengthening communication, and making student support services more accessible.
 
-### ⚙️ Workflow Automation
+### ⚙️ Practical Workflow Automation
 
-Exploring software-driven approaches to streamline repetitive administrative tasks and improve everyday operational workflows, with an interest in practical applications for reservation and property management processes.
+Exploring how software can simplify repetitive administrative tasks and improve everyday operational workflows, particularly in areas such as reservation and property management processes.
 
 ---
 
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub contribution statistics" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=uttamest&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub repository statistics" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=uttamest&layout=compact&theme=tokyonight&hide_border=true" alt="Most-used programming languages" />
 </p>
 
@@ -94,7 +92,7 @@ Exploring software-driven approaches to streamline repetitive administrative tas
 
 ## 🤝 Let's Connect
 
-I'm always interested in connecting with developers, exchanging ideas, learning from different perspectives, and collaborating on meaningful projects.
+I'm interested in connecting with developers, exchanging ideas, learning from different perspectives, and collaborating on projects that create meaningful impact.
 
 <p>
   <a href="https://github.com/uttamest">
