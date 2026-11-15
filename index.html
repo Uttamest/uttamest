@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b1118" />
-  <meta name="color-scheme" content="dark light" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#101512">
+  <meta name="description" content="Portfolio of Uttam Shrestha, an Intelligent Computing undergraduate at Dong-eui University in Busan, South Korea. Explore selected software projects, technical interests, and experience.">
+  <meta name="author" content="Uttam Shrestha">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Uttam Shrestha — Developer Portfolio">
+  <meta property="og:description" content="Selected projects, technical interests, and experience by Uttam Shrestha.">
+  <meta property="og:site_name" content="Uttam Shrestha">
+  <meta name="twitter:card" content="summary">
+  <title>Uttam Shrestha — Developer Portfolio</title>
 
-  <meta name="description" content="Explore the portfolio of Uttam Shrestha, an Intelligent Computing undergraduate at Dong-eui University in Busan, South Korea. Discover selected projects, technical interests, and experience." />
-  <meta name="author" content="Uttam Shrestha" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Uttam Shrestha — Developer Portfolio" />
-  <meta property="og:site_name" content="Uttam Shrestha" />
-  <meta property="og:description" content="Selected projects, technical interests, and experience by Uttam Shrestha." />
-  <meta name="twitter:card" content="summary" />
-
-  <title>Uttam Shrestha | Developer Portfolio</title>
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b1118'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='%23c4f18b'%3EUS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23101512'/%3E%3Cpath d='M15 17h34v8H28v6h18v8H28v8H15z' fill='%23c5ef9b'/%3E%3C/svg%3E">
 
   <script>
     (() => {
       try {
-        const savedTheme = localStorage.getItem('uttam-theme');
-
-        if (savedTheme === 'light' || savedTheme === 'dark') {
+        const savedTheme = localStorage.getItem("uttam-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
           document.documentElement.dataset.theme = savedTheme;
         }
-      } catch (_) {
-        // The page remains usable when browser storage is unavailable.
-      }
+      } catch (_) {}
     })();
   </script>
 
   <style>
+    /* =========================================
+       DESIGN SYSTEM
+    ========================================= */
+
     :root {
       color-scheme: dark;
 
-      --page: #0b1118;
-      --page-soft: #101923;
-      --surface: #131f2b;
-      --surface-raised: #192735;
+      --page: #101512;
+      --page-soft: #151d18;
+      --surface: #19231c;
+      --surface-raised: #202d23;
+      --surface-glass: rgba(25, 35, 28, .82);
 
-      --text: #f2f5f3;
-      --muted: #a7b4bf;
-      --subtle: #7e8d9b;
+      --text: #f2f5ef;
+      --muted: #aab6aa;
+      --subtle: #7e8c80;
 
-      --border: #293a49;
+      --border: #2c3b30;
+      --border-strong: #405343;
 
-      --accent: #c4f18b;
+      --accent: #c5ef9b;
+      --accent-strong: #a9df78;
       --accent-ink: #172313;
-      --accent-tint: rgba(196, 241, 139, .10);
+      --accent-tint: rgba(197, 239, 155, .09);
 
-      --blue: #9bcaff;
+      --blue: #a5c9ed;
 
-      --header: rgba(11, 17, 24, .86);
+      --header: rgba(16, 21, 18, .88);
 
-      --shadow: 0 24px 70px rgba(0, 0, 0, .24);
+      --shadow:
+        0 25px 75px rgba(0, 0, 0, .25);
 
       --content-width: 1160px;
 
-      --radius-lg: 22px;
-      --radius-md: 15px;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+
+      --ease: cubic-bezier(.2, .75, .25, 1);
     }
 
     html[data-theme="light"] {
       color-scheme: light;
 
-      --page: #f6f8f5;
-      --page-soft: #edf2ed;
+      --page: #f7f9f5;
+      --page-soft: #edf2eb;
       --surface: #ffffff;
       --surface-raised: #f1f5ef;
+      --surface-glass: rgba(255, 255, 255, .88);
 
-      --text: #18251f;
-      --muted: #526259;
-      --subtle: #708077;
+      --text: #19251c;
+      --muted: #59675b;
+      --subtle: #78857a;
 
-      --border: #dbe4db;
+      --border: #dce5d9;
+      --border-strong: #c4d2c1;
 
       --accent: #397b35;
+      --accent-strong: #2e682b;
       --accent-ink: #ffffff;
-      --accent-tint: rgba(57, 123, 53, .09);
+      --accent-tint: rgba(57, 123, 53, .08);
 
-      --blue: #1f639f;
+      --blue: #286b9f;
 
-      --header: rgba(246, 248, 245, .91);
+      --header: rgba(247, 249, 245, .91);
 
-      --shadow: 0 22px 58px rgba(29, 58, 35, .08);
+      --shadow:
+        0 25px 70px rgba(34, 60, 38, .08);
     }
 
     *,
@@ -101,13 +111,31 @@
     }
 
     body {
+      min-height: 100vh;
       margin: 0;
       overflow-x: hidden;
+
       background: var(--page);
       color: var(--text);
-      font: 400 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      font-size: 16px;
+      line-height: 1.7;
+
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+
+      transition:
+        background .25s ease,
+        color .25s ease;
     }
 
     body,
@@ -116,18 +144,27 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
     }
 
-    button {
-      color: inherit;
-      font: inherit;
-    }
-
     svg {
       display: block;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     ::selection {
@@ -143,14 +180,6 @@
     .container {
       width: min(var(--content-width), calc(100% - 56px));
       margin-inline: auto;
-    }
-
-    .container > *:last-child {
-      margin-bottom: 0;
-    }
-
-    section[id] {
-      scroll-margin-top: 104px;
     }
 
     .sr-only {
@@ -172,6 +201,7 @@
       left: 16px;
 
       padding: 11px 17px;
+
       border-radius: 9px;
 
       background: var(--accent);
@@ -203,6 +233,14 @@
       height: 16px;
     }
 
+    .section {
+      padding: 100px 0;
+    }
+
+    .rule {
+      height: 1px;
+      background: var(--border);
+    }
 
     /* =========================================
        NAVIGATION
@@ -225,7 +263,7 @@
       align-items: center;
       gap: 30px;
 
-      min-height: 82px;
+      min-height: 80px;
     }
 
     .brand {
@@ -241,8 +279,8 @@
       display: grid;
       place-items: center;
 
-      width: 42px;
-      height: 42px;
+      width: 43px;
+      height: 43px;
       flex: none;
 
       border-radius: 12px;
@@ -250,7 +288,7 @@
       background: var(--accent);
       color: var(--accent-ink);
 
-      font-size: .85rem;
+      font-size: .88rem;
       font-weight: 900;
       letter-spacing: -.07em;
     }
@@ -260,10 +298,10 @@
 
       color: var(--text);
 
-      font-size: .94rem;
+      font-size: .95rem;
       font-weight: 800;
       letter-spacing: -.035em;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .brand-role {
@@ -276,20 +314,19 @@
       font-size: .65rem;
       font-weight: 650;
       letter-spacing: .12em;
-      line-height: 1.3;
       text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 29px;
     }
 
     .nav-links a {
       color: var(--muted);
 
-      font-size: .84rem;
+      font-size: .83rem;
       font-weight: 650;
 
       transition: color .2s ease;
@@ -302,7 +339,7 @@
 
     .nav-links a[aria-current="location"] {
       text-decoration: underline;
-      text-decoration-color: color-mix(in srgb, var(--accent) 65%, transparent);
+      text-decoration-color: var(--accent);
       text-underline-offset: 7px;
     }
 
@@ -339,11 +376,6 @@
       background: var(--surface-raised);
     }
 
-    .icon-button:active,
-    .button:active {
-      transform: translateY(0);
-    }
-
     .theme-toggle .icon-sun {
       display: none;
     }
@@ -363,7 +395,7 @@
       gap: 8px;
 
       min-height: 42px;
-      padding: 0 15px;
+      padding: 0 16px;
 
       border-radius: 10px;
 
@@ -373,7 +405,9 @@
       font-size: .82rem;
       font-weight: 800;
 
-      transition: transform .2s ease, filter .2s ease;
+      transition:
+        transform .2s ease,
+        filter .2s ease;
     }
 
     .nav-contact:hover,
@@ -386,9 +420,8 @@
       display: none;
     }
 
-
     /* =========================================
-       HERO SECTION
+       HERO
     ========================================= */
 
     .hero {
@@ -396,18 +429,18 @@
       isolation: isolate;
       overflow: hidden;
 
-      padding: 112px 0 116px;
+      padding: 112px 0 120px;
     }
 
     .hero::before {
       position: absolute;
       z-index: -1;
 
-      top: -420px;
-      right: -245px;
+      top: -390px;
+      right: -220px;
 
-      width: 780px;
-      height: 780px;
+      width: 760px;
+      height: 760px;
 
       border-radius: 50%;
 
@@ -415,8 +448,8 @@
 
       background: radial-gradient(
         circle,
-        rgba(135, 184, 111, .15),
-        transparent 66%
+        rgba(143, 190, 119, .16),
+        transparent 67%
       );
 
       pointer-events: none;
@@ -424,9 +457,9 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(370px, .92fr);
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
       align-items: center;
-      gap: 62px;
+      gap: 65px;
     }
 
     .eyebrow {
@@ -436,7 +469,7 @@
 
       color: var(--accent);
 
-      font-size: .73rem;
+      font-size: .72rem;
       font-weight: 850;
       letter-spacing: .15em;
       text-transform: uppercase;
@@ -445,7 +478,6 @@
     .eyebrow::before {
       width: 24px;
       height: 1px;
-
       background: currentColor;
       content: "";
     }
@@ -462,10 +494,10 @@
 
       margin: 21px 0 22px;
 
-      font-size: clamp(3.15rem, 6vw, 5.55rem);
-      font-weight: 820;
+      font-size: clamp(3.1rem, 6.1vw, 5.5rem);
+      font-weight: 830;
 
-      line-height: 1.06;
+      line-height: 1.05;
       letter-spacing: -.078em;
     }
 
@@ -485,7 +517,7 @@
 
       color: var(--muted);
 
-      font-size: 1.02rem;
+      font-size: 1rem;
       line-height: 1.9;
     }
 
@@ -514,7 +546,7 @@
       border: 1px solid transparent;
       border-radius: 10px;
 
-      font-size: .86rem;
+      font-size: .85rem;
       font-weight: 760;
 
       transition:
@@ -533,7 +565,6 @@
 
     .button-outline {
       border-color: var(--border);
-
       background: var(--surface);
       color: var(--text);
     }
@@ -558,7 +589,7 @@
 
       color: var(--subtle);
 
-      font-size: .79rem;
+      font-size: .78rem;
       font-weight: 560;
     }
 
@@ -566,8 +597,9 @@
       color: var(--accent);
     }
 
-
-    /* HERO CODE WINDOW */
+    /* =========================================
+       HERO CODE WINDOW
+    ========================================= */
 
     .code-window {
       position: relative;
@@ -607,10 +639,8 @@
     .window-dot {
       width: 9px;
       height: 9px;
-
       border-radius: 50%;
-
-      background: #f07d7e;
+      background: #ef8382;
     }
 
     .window-dot:nth-child(2) {
@@ -642,7 +672,7 @@
       background: var(--page);
       color: var(--muted);
 
-      font: 500 .83rem/2.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+      font: 500 .82rem/2.15 ui-monospace, SFMono-Regular, Consolas, monospace;
     }
 
     .code-comment {
@@ -699,7 +729,6 @@
       gap: 7px;
 
       color: var(--accent);
-
       font-size: .72rem;
     }
 
@@ -710,7 +739,6 @@
       border-radius: 50%;
 
       background: var(--accent);
-
       box-shadow: 0 0 0 4px var(--accent-tint);
     }
 
@@ -736,33 +764,19 @@
 
     .floating-note span {
       display: block;
-
       color: var(--subtle);
-
       font-size: .65rem;
     }
 
     .floating-note strong {
       display: block;
-
       color: var(--text);
-
       font-size: .78rem;
     }
 
-    .rule {
-      height: 1px;
-      background: var(--border);
-    }
-
-
     /* =========================================
-       SHARED SECTION STYLES
+       SECTION HEADINGS
     ========================================= */
-
-    .section {
-      padding: 96px 0 104px;
-    }
 
     .section-heading {
       display: flex;
@@ -770,17 +784,16 @@
       justify-content: space-between;
       gap: 28px;
 
-      margin-bottom: 35px;
+      margin-bottom: 37px;
     }
 
     .section-index {
       display: block;
-
       margin-bottom: 10px;
 
       color: var(--accent);
 
-      font-size: .7rem;
+      font-size: .69rem;
       font-weight: 850;
       letter-spacing: .15em;
       text-transform: uppercase;
@@ -791,7 +804,7 @@
       margin: 0 0 10px;
 
       font-size: clamp(2.15rem, 4.1vw, 3.35rem);
-      font-weight: 800;
+      font-weight: 810;
 
       line-height: 1.14;
       letter-spacing: -.067em;
@@ -800,12 +813,10 @@
     .section-heading p,
     .section-lead {
       max-width: 610px;
-
       margin: 0;
 
       color: var(--muted);
-
-      font-size: .93rem;
+      font-size: .92rem;
     }
 
     .text-link {
@@ -825,7 +836,6 @@
       text-underline-offset: 5px;
     }
 
-
     /* =========================================
        PROJECTS
     ========================================= */
@@ -839,7 +849,7 @@
       overflow: hidden;
 
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
 
       background: var(--surface);
     }
@@ -852,7 +862,6 @@
       justify-content: center;
 
       min-width: 0;
-
       overflow: hidden;
 
       padding: 34px;
@@ -931,9 +940,7 @@
 
     .brain-description {
       margin-bottom: 14px;
-
       color: #788698;
-
       font-size: .62rem;
     }
 
@@ -954,18 +961,14 @@
 
     .brain-metric strong {
       display: block;
-
       font-size: 1.15rem;
       line-height: 1.2;
     }
 
     .brain-metric span {
       display: block;
-
       margin-top: 4px;
-
       color: #6d7d90;
-
       font-size: .52rem;
     }
 
@@ -991,9 +994,7 @@
 
     .brain-deck small {
       display: block;
-
       color: #62658b;
-
       font-size: .55rem;
     }
 
@@ -1042,7 +1043,7 @@
       margin: 14px 0 10px;
 
       font-size: clamp(1.7rem, 2.8vw, 2.35rem);
-      font-weight: 800;
+      font-weight: 810;
 
       line-height: 1.2;
       letter-spacing: -.055em;
@@ -1053,18 +1054,17 @@
 
       color: var(--muted);
 
-      font-size: .87rem;
+      font-size: .86rem;
       line-height: 1.82;
     }
 
     .project-contribution {
       display: block;
-
       margin: 0 0 12px;
 
       color: var(--text);
 
-      font-size: .79rem;
+      font-size: .78rem;
       line-height: 1.65;
     }
 
@@ -1092,7 +1092,7 @@
       background: var(--page-soft);
       color: var(--muted);
 
-      font-size: .68rem;
+      font-size: .67rem;
       font-weight: 650;
     }
 
@@ -1114,25 +1114,21 @@
       flex-direction: column;
 
       min-width: 0;
-
       overflow: hidden;
 
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius: var(--radius-xl);
 
       background: var(--surface);
 
-      transition: transform .24s ease, border-color .24s ease;
+      transition:
+        transform .24s ease,
+        border-color .24s ease;
     }
 
     .project-card:hover {
       transform: translateY(-4px);
-
-      border-color: color-mix(
-        in srgb,
-        var(--accent) 48%,
-        var(--border)
-      );
+      border-color: var(--accent);
     }
 
     .project-card:focus-within {
@@ -1154,11 +1150,10 @@
     }
 
     .project-card .project-info p {
-      font-size: .84rem;
+      font-size: .83rem;
     }
 
-
-    /* E-COMMERCE PROJECT PREVIEW */
+    /* E-COMMERCE PREVIEW */
 
     .commerce-art {
       background:
@@ -1225,11 +1220,9 @@
       place-items: center;
 
       height: 105px;
-
       overflow: hidden;
 
       border-radius: 5px;
-
       background: #e6cec0;
     }
 
@@ -1248,7 +1241,6 @@
       border-radius: 50% 50% 7px 7px;
 
       background: rgba(103, 68, 61, .43);
-
       box-shadow: 7px 8px 0 rgba(255, 255, 255, .1);
 
       content: "";
@@ -1258,20 +1250,16 @@
 
     .store-product:nth-child(2)::before {
       width: 38%;
-
       border-radius: 18px 18px 6px 6px;
-
       background: rgba(102, 67, 92, .48);
     }
 
     .store-product:nth-child(3)::before {
       border-radius: 10px 10px 3px 3px;
-
       background: rgba(71, 82, 66, .5);
     }
 
-
-    /* TERMINAL PROJECT PREVIEW */
+    /* TERMINAL PREVIEW */
 
     .terminal-art {
       background:
@@ -1283,7 +1271,6 @@
       width: min(100%, 405px);
 
       overflow: hidden;
-
       padding-bottom: 13px;
 
       border: 1px solid #476070;
@@ -1314,15 +1301,12 @@
       height: 7px;
 
       border-radius: 50%;
-
       background: #718399;
     }
 
     .terminal-top span {
       margin-left: auto;
-
       color: #8193a4;
-
       font-size: .59rem;
     }
 
@@ -1341,7 +1325,6 @@
     .terminal-lines .dim {
       color: #91a2b3;
     }
-
 
     /* PROJECT IN PROGRESS */
 
@@ -1373,11 +1356,9 @@
 
     .work-in-progress p {
       max-width: 800px;
-
       margin: 0;
 
       color: var(--muted);
-
       font-size: .82rem;
     }
 
@@ -1400,7 +1381,6 @@
       font-weight: 700;
       white-space: nowrap;
     }
-
 
     /* =========================================
        ABOUT
@@ -1426,8 +1406,7 @@
 
     .about-copy p {
       color: var(--muted);
-
-      font-size: .94rem;
+      font-size: .93rem;
       line-height: 1.9;
     }
 
@@ -1480,13 +1459,12 @@
       line-height: 1.75;
     }
 
-
     /* =========================================
        SKILLS
     ========================================= */
 
     .skills-section {
-      padding-bottom: 88px;
+      padding-bottom: 90px;
     }
 
     .skills-grid {
@@ -1513,12 +1491,7 @@
     .skill-card:hover {
       transform: translateY(-3px);
 
-      border-color: color-mix(
-        in srgb,
-        var(--accent) 42%,
-        var(--border)
-      );
-
+      border-color: var(--accent);
       background: var(--surface-raised);
     }
 
@@ -1528,7 +1501,6 @@
 
     .skill-card h3 {
       margin: 0 0 8px;
-
       font-size: .93rem;
     }
 
@@ -1537,13 +1509,12 @@
 
       color: var(--muted);
 
-      font-size: .77rem;
+      font-size: .76rem;
       line-height: 1.8;
     }
 
     .skill-note {
       display: block;
-
       margin-top: 10px;
 
       color: var(--subtle);
@@ -1551,7 +1522,6 @@
       font-size: .69rem;
       line-height: 1.5;
     }
-
 
     /* =========================================
        EDUCATION AND EXPERIENCE
@@ -1612,9 +1582,8 @@
       line-height: 1.78;
     }
 
-
     /* =========================================
-       CONTACT AND FOOTER
+       CONTACT
     ========================================= */
 
     .contact-section {
@@ -1656,7 +1625,6 @@
         0 0 0 150px rgba(111, 172, 102, .025);
 
       content: "";
-
       pointer-events: none;
     }
 
@@ -1671,7 +1639,7 @@
       margin: 11px 0 12px;
 
       font-size: clamp(2.05rem, 3.8vw, 3.25rem);
-      font-weight: 800;
+      font-weight: 810;
 
       line-height: 1.16;
       letter-spacing: -.065em;
@@ -1679,12 +1647,10 @@
 
     .contact-card p {
       max-width: 590px;
-
       margin: 0;
 
       color: var(--muted);
-
-      font-size: .9rem;
+      font-size: .89rem;
     }
 
     .contact-actions {
@@ -1707,7 +1673,6 @@
 
     .social-links a {
       color: var(--muted);
-
       font-size: .78rem;
       font-weight: 720;
     }
@@ -1716,9 +1681,12 @@
       color: var(--accent);
     }
 
+    /* =========================================
+       FOOTER
+    ========================================= */
+
     .footer {
       padding: 23px 0 30px;
-
       border-top: 1px solid var(--border);
     }
 
@@ -1729,7 +1697,6 @@
       gap: 15px;
 
       color: var(--subtle);
-
       font-size: .71rem;
     }
 
@@ -1741,7 +1708,6 @@
     .footer-inner a:hover {
       color: var(--accent);
     }
-
 
     /* =========================================
        RESPONSIVE DESIGN
@@ -1910,9 +1876,7 @@
 
       .code-content {
         min-height: 246px;
-
         padding: 19px;
-
         font-size: .74rem;
       }
 
@@ -1929,7 +1893,6 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 13px;
-
         margin-bottom: 26px;
       }
 
@@ -1957,7 +1920,6 @@
       .work-in-progress {
         align-items: flex-start;
         flex-direction: column;
-
         padding: 22px;
       }
 
@@ -2042,8 +2004,9 @@
       }
     }
 
-
-    /* ACCESSIBILITY: REDUCED MOTION */
+    /* =========================================
+       ACCESSIBILITY
+    ========================================= */
 
     @media (prefers-reduced-motion: reduce) {
       html {
@@ -2062,11 +2025,7 @@
 </head>
 
 <body>
-
-  <!-- =========================================
-       SVG ICON DEFINITIONS
-  ========================================== -->
-
+  <!-- SVG ICON DEFINITIONS -->
   <svg
     aria-hidden="true"
     width="0"
@@ -2075,77 +2034,67 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <symbol id="i-arrow" viewBox="0 0 24 24">
-      <path d="M7 17 17 7M8 7h9v9" />
+      <path d="M7 17 17 7M8 7h9v9"/>
     </symbol>
 
     <symbol id="i-arrow-right" viewBox="0 0 24 24">
-      <path d="M5 12h14m-6-6 6 6-6 6" />
+      <path d="M5 12h14m-6-6 6 6-6 6"/>
     </symbol>
 
     <symbol id="i-github" viewBox="0 0 24 24">
-      <path d="M9 19c-4.6 1.4-4.6-2.5-6.5-3m13 6v-3.87a3.38 3.38 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19.5 4.8 5.07 5.07 0 0 0 19.41 1S18.18.65 15.5 2.48a13.4 13.4 0 0 0-7 0C5.82.65 4.59 1 4.59 1A5.07 5.07 0 0 0 4.5 4.8 5.44 5.44 0 0 0 3 8.5c0 5.42 3.3 6.61 6.44 7A3.38 3.38 0 0 0 8.5 18.13V22" />
+      <path d="M9 19c-4.6 1.4-4.6-2.5-6.5-3m13 6v-3.87a3.38 3.38 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19.5 4.8 5.07 5.07 0 0 0 19.41 1S18.18.65 15.5 2.48a13.4 13.4 0 0 0-7 0C5.82.65 4.59 1 4.59 1A5.07 5.07 0 0 0 4.5 4.8 5.44 5.44 0 0 0 3 8.5c0 5.42 3.3 6.61 6.44 7A3.38 3.38 0 0 0 8.5 18.13V22"/>
     </symbol>
 
     <symbol id="i-mail" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m3 7 9 6 9-6" />
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
     </symbol>
 
     <symbol id="i-pin" viewBox="0 0 24 24">
-      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
-      <circle cx="12" cy="10" r="2.5" />
+      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="2.5"/>
     </symbol>
 
     <symbol id="i-code" viewBox="0 0 24 24">
-      <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 4l-4 16" />
+      <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 4l-4 16"/>
     </symbol>
 
     <symbol id="i-layers" viewBox="0 0 24 24">
-      <path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5" />
+      <path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/>
     </symbol>
 
     <symbol id="i-check" viewBox="0 0 24 24">
-      <path d="m5 12 4 4L19 6" />
+      <path d="m5 12 4 4L19 6"/>
     </symbol>
 
     <symbol id="i-moon" viewBox="0 0 24 24">
-      <path d="M20.6 15.3A9 9 0 0 1 8.7 3.4 9 9 0 1 0 20.6 15.3Z" />
+      <path d="M20.6 15.3A9 9 0 0 1 8.7 3.4 9 9 0 1 0 20.6 15.3Z"/>
     </symbol>
 
     <symbol id="i-sun" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
     </symbol>
 
     <symbol id="i-menu" viewBox="0 0 24 24">
-      <path d="M4 7h16M4 12h16M4 17h16" />
+      <path d="M4 7h16M4 12h16M4 17h16"/>
     </symbol>
 
     <symbol id="i-book" viewBox="0 0 24 24">
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
     </symbol>
 
     <symbol id="i-database" viewBox="0 0 24 24">
-      <ellipse cx="12" cy="5" rx="9" ry="3" />
-      <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3" />
+      <ellipse cx="12" cy="5" rx="9" ry="3"/>
+      <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/>
     </symbol>
   </svg>
 
-
-  <!-- =========================================
-       SKIP NAVIGATION
-  ========================================== -->
-
   <a class="skip-link" href="#main">Skip to content</a>
 
-
-  <!-- =========================================
-       HEADER / NAVIGATION
-  ========================================== -->
-
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav-inner">
-
       <a
         class="brand"
         href="#top"
@@ -2159,11 +2108,7 @@
         </span>
       </a>
 
-      <nav
-        class="nav-links"
-        id="site-nav"
-        aria-label="Main navigation"
-      >
+      <nav class="nav-links" id="site-nav" aria-label="Main navigation">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -2172,7 +2117,6 @@
       </nav>
 
       <div class="nav-actions">
-
         <button
           class="icon-button theme-toggle"
           id="theme-toggle"
@@ -2182,22 +2126,18 @@
           title="Toggle color theme"
         >
           <svg class="icon icon-moon" aria-hidden="true">
-            <use href="#i-moon" />
+            <use href="#i-moon"/>
           </svg>
 
           <svg class="icon icon-sun" aria-hidden="true">
-            <use href="#i-sun" />
+            <use href="#i-sun"/>
           </svg>
         </button>
 
-        <a
-          class="nav-contact"
-          href="mailto:uttamnitro5@gmail.com"
-        >
+        <a class="nav-contact" href="#contact">
           Let's connect
-
           <svg class="icon icon-sm" aria-hidden="true">
-            <use href="#i-arrow" />
+            <use href="#i-arrow"/>
           </svg>
         </a>
 
@@ -2205,1299 +2145,906 @@
           class="icon-button menu-toggle"
           id="menu-toggle"
           type="button"
+          aria-label="Open navigation menu"
           aria-expanded="false"
           aria-controls="site-nav"
-          aria-label="Open navigation menu"
-          title="Open navigation menu"
         >
           <svg class="icon" aria-hidden="true">
-            <use href="#i-menu" />
+            <use href="#i-menu"/>
           </svg>
         </button>
-
       </div>
     </div>
   </header>
 
-
-  <!-- =========================================
-       MAIN CONTENT
-  ========================================== -->
-
   <main id="main">
-
-    <!-- HERO SECTION -->
-
-    <section
-      class="hero"
-      id="top"
-      aria-labelledby="hero-title"
-    >
+    <!-- HERO -->
+    <section class="hero" id="top">
       <div class="container hero-grid">
-
         <div class="hero-copy">
+          <span class="eyebrow">Developer portfolio</span>
 
-          <span class="eyebrow">
-            Intelligent Computing Undergraduate · Busan, South Korea
-          </span>
-
-          <h1 id="hero-title">
-            Turning ideas into
-            <span class="hero-highlight">practical</span>
-            digital solutions.
+          <h1>
+            Building useful
+            <span class="hero-highlight">digital</span>
+            experiences.
           </h1>
 
           <p class="hero-description">
-            I'm an
-            <strong>Intelligent Computing undergraduate at Dong-eui University</strong>
-            in Busan, South Korea. I'm interested in software development
-            and building practical, user-centered applications — from web
-            platforms and programming projects to tools that make everyday
-            tasks simpler.
+            I'm <strong>Uttam Shrestha</strong>, an Intelligent Computing
+            undergraduate at Dong-eui University in Busan, South Korea.
+            I enjoy building practical, user-centered software and
+            exploring how technology can solve meaningful real-world problems.
           </p>
 
           <div class="hero-buttons">
-
             <a class="button button-primary" href="#projects">
-              Explore my projects
-
+              Explore my work
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-arrow-right" />
+                <use href="#i-arrow-right"/>
               </svg>
             </a>
 
-            <a
-              class="button button-outline"
-              href="https://github.com/Uttamest"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="button button-outline" href="#contact">
+              Get in touch
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-github" />
-              </svg>
-
-              GitHub profile
-
-              <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-arrow" />
+                <use href="#i-mail"/>
               </svg>
             </a>
-
           </div>
 
           <div class="hero-facts">
-
             <span>
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-pin" />
+                <use href="#i-pin"/>
               </svg>
-
               Busan, South Korea
             </span>
 
             <span>
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-code" />
+                <use href="#i-book"/>
               </svg>
-
-              Web development · Programming · Mobile technologies
+              Dong-eui University
             </span>
 
+            <span>
+              <svg class="icon icon-sm" aria-hidden="true">
+                <use href="#i-code"/>
+              </svg>
+              Software Development
+            </span>
           </div>
         </div>
 
-
-        <!-- TERMINAL-STYLE INTRODUCTION -->
-
-        <div
-          class="code-window"
-          role="img"
-          aria-label="A terminal-style introduction showing Uttam's focus on web applications, C++, and user experience"
-        >
-
-          <div class="window-bar" aria-hidden="true">
+        <div class="code-window" aria-label="Developer introduction">
+          <div class="window-bar">
             <span class="window-dot"></span>
             <span class="window-dot"></span>
             <span class="window-dot"></span>
 
-            <span class="window-label">
-              uttam@portfolio: ~
-            </span>
+            <span class="window-label">developer.ts</span>
           </div>
 
-          <div class="code-content" aria-hidden="true">
+          <div class="code-content">
+            <div class="code-comment">// A little about me</div>
+            <div><span class="code-prompt">const</span> developer = {</div>
 
-            <div class="code-comment">
-              // what I enjoy working on
-            </div>
+            <div>&nbsp;&nbsp;name: <span class="code-value">"Uttam Shrestha"</span>,</div>
+            <div>&nbsp;&nbsp;role: <span class="code-value">"Software Developer"</span>,</div>
+            <div>&nbsp;&nbsp;study: <span class="code-value">"Intelligent Computing"</span>,</div>
+            <div>&nbsp;&nbsp;university: <span class="code-value">"Dong-eui University"</span>,</div>
+            <div>&nbsp;&nbsp;location: <span class="code-value">"Busan, South Korea"</span>,</div>
 
-            <div>
-              <span class="code-prompt">$</span>
-              whoami
-            </div>
+            <div>&nbsp;&nbsp;interests: [</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-value">"Mobile Development"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-value">"Full-Stack Development"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-value">"Software Engineering"</span></div>
+            <div>&nbsp;&nbsp;]</div>
 
-            <div class="code-value">
-              uttam_shrestha
-            </div>
-
-            <div style="height:9px"></div>
-
-            <div>
-              <span class="code-prompt">$</span>
-              areas_of_interest
-            </div>
-
-            <div class="code-value">
-              <span class="syntax">software</span> ·
-              <span class="syntax">web</span> ·
-              <span class="syntax">problem-solving</span>
-            </div>
-
-            <div style="height:9px"></div>
-
-            <div>
-              <span class="code-prompt">$</span>
-              mindset
-            </div>
-
-            <div class="code-value">
-              learn · build · refine
-              <span class="cursor"></span>
-            </div>
-
+            <div>};</div>
+            <div class="code-comment">// Always learning, always building.</div>
+            <div><span class="code-prompt">developer</span>.<span class="code-value">build</span>()<span class="cursor"></span></div>
           </div>
 
           <div class="window-footer">
-
-            <span>Learning through hands-on projects</span>
+            <span>Open to learning and collaboration</span>
 
             <strong>
-              <i class="status-dot" aria-hidden="true"></i>
-              In progress
+              <span class="status-dot"></span>
+              Building
             </strong>
-
           </div>
 
-          <div class="floating-note" aria-hidden="true">
-            <span>My approach</span>
-            <strong>Build · Test · Improve</strong>
+          <div class="floating-note">
+            <span>Currently focused on</span>
+            <strong>Building meaningful software</strong>
           </div>
-
         </div>
       </div>
     </section>
 
+    <div class="rule"></div>
 
-    <!-- DIVIDER -->
-
-    <div class="container">
-      <div class="rule"></div>
-    </div>
-
-
-    <!-- =========================================
-         PROJECTS SECTION
-    ========================================== -->
-
-    <section
-      class="section"
-      id="projects"
-      aria-labelledby="projects-title"
-    >
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
       <div class="container">
-
         <div class="section-heading">
-
           <div>
+            <span class="section-index">01 / Selected work</span>
 
-            <span class="section-index">
-              01 / Selected work
-            </span>
-
-            <h2 id="projects-title">
-              Projects built with purpose.
-            </h2>
+            <h2>Projects & development</h2>
 
             <p>
-              A selection of personal and university projects that demonstrate
-              my approach to problem-solving, thoughtful development,
-              and collaboration.
+              A selection of projects that reflect my interest in
+              software development, practical problem-solving, and
+              user-centered design.
             </p>
-
           </div>
 
           <a
             class="text-link"
-            href="https://github.com/Uttamest?tab=repositories"
+            href="https://github.com/Uttamest"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Browse all repositories
-
+            View GitHub profile
             <svg class="icon icon-sm" aria-hidden="true">
-              <use href="#i-arrow" />
+              <use href="#i-arrow"/>
             </svg>
           </a>
-
         </div>
 
-
-        <!-- FEATURED PROJECT: BRAINLOOP -->
-
+        <!-- FEATURED PROJECT -->
         <article class="featured-project">
-
-          <div class="project-art brain-art" aria-hidden="true">
-
+          <div class="project-art brain-art">
             <div class="brain-preview">
-
               <div class="brain-top">
-
                 <span class="brain-logo">B</span>
+                BRAINLOOP
 
-                BrainLoop
-
-                <span class="brain-badge">
-                  STUDY DASHBOARD
-                </span>
-
+                <span class="brain-badge">STUDY SPACE</span>
               </div>
 
-              <div class="brain-heading">
-                Make learning stick.
-              </div>
+              <h3 class="brain-heading">Your learning dashboard</h3>
 
               <p class="brain-description">
-                A focused space to review what matters.
+                Build knowledge through consistent, focused practice.
               </p>
 
               <div class="brain-metrics">
-
                 <div class="brain-metric">
-                  <strong>24</strong>
-                  <span>Total cards</span>
+                  <strong>01</strong>
+                  <span>Study decks</span>
                 </div>
 
                 <div class="brain-metric">
-                  <strong>08</strong>
-                  <span>Due to review</span>
+                  <strong>02</strong>
+                  <span>Review cards</span>
                 </div>
 
                 <div class="brain-metric">
-                  <strong>12</strong>
-                  <span>Mastered</span>
+                  <strong>03</strong>
+                  <span>Progress</span>
                 </div>
-
               </div>
 
               <div class="brain-deck">
-
                 <div>
-                  <b>My study deck</b>
-                  <small>Practice with active recall</small>
+                  <b>Continue learning</b>
+                  <small>Review your flashcards</small>
                 </div>
 
                 <span class="brain-deck-arrow">→</span>
-
               </div>
-
             </div>
           </div>
 
-
           <div class="project-info">
-
             <div class="project-meta">
-              Personal project
+              <span>Featured project</span>
               <span class="separator">/</span>
-              Learning technology
+              <span>Learning application</span>
             </div>
 
             <h3>BrainLoop</h3>
 
             <p>
-              A browser-based flashcard application designed to support
-              active recall and spaced review. Users can create custom decks,
-              assess how well they remember each answer, monitor review
-              progress, and keep their study data in the browser.
+              An interactive flashcard application designed to make
+              studying more organized and effective through active
+              recall, spaced repetition, and learning progress tracking.
             </p>
 
             <span class="project-contribution">
-              <span>Key features:</span>
-              Deck and card management, interval-based review scheduling,
-              progress tracking, and JSON backup/import.
+              <span>Focus:</span>
+              Learning experience, application architecture, and
+              interactive interface design.
             </span>
 
-            <ul class="tag-list" aria-label="Technologies used">
+            <ul class="tag-list">
               <li>JavaScript</li>
               <li>HTML</li>
               <li>CSS</li>
-              <li>LocalStorage</li>
-              <li>Responsive design</li>
+              <li>Local Storage</li>
+              <li>Responsive UI</li>
             </ul>
 
             <a
               class="text-link"
-              href="https://github.com/Uttamest/BrainLoop"
+              href="https://uttamest.github.io/brainloop/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View BrainLoop source code on GitHub"
             >
-              View source code
-
+              Explore BrainLoop
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-arrow" />
+                <use href="#i-arrow"/>
               </svg>
             </a>
-
           </div>
         </article>
 
-
-        <!-- ADDITIONAL PROJECTS -->
-
+        <!-- OTHER PROJECTS -->
         <div class="project-grid">
-
-
-          <!-- ALME PAHIRAN -->
-
+          <!-- E-COMMERCE -->
           <article class="project-card">
-
-            <div class="project-art commerce-art" aria-hidden="true">
-
+            <div class="project-art commerce-art">
               <div class="store-preview">
-
                 <div class="store-top">
                   <b>ALME PAHIRAN</b>
-                  <span>New arrivals · Our story</span>
+                  <span>COLLECTION / 2026</span>
                 </div>
 
                 <div class="store-title">
-                  A celebration of Nepali style
+                  Discover your style
                 </div>
 
                 <div class="store-products">
-                  <span class="store-product"></span>
-                  <span class="store-product"></span>
-                  <span class="store-product"></span>
+                  <div class="store-product"></div>
+                  <div class="store-product"></div>
+                  <div class="store-product"></div>
                 </div>
-
               </div>
             </div>
 
             <div class="project-info">
-
               <div class="project-meta">
-                Team project
+                <span>Web application</span>
                 <span class="separator">/</span>
-                Web development
+                <span>E-commerce</span>
               </div>
 
               <h3>AlMe Pahiran</h3>
 
               <p>
-                A PHP and MySQL e-commerce website for traditional Nepali
-                clothing, with product listings, user accounts, a shopping
-                cart, order requests, and administrative tools.
+                An e-commerce website concept focused on providing an
+                accessible shopping experience, with organized product
+                information, customer support content, and a structured
+                application interface.
               </p>
 
-              <span class="project-contribution">
-                <span>My role · Team leader:</span>
-                Developed the homepage and checkout flow, established the
-                database foundation, contributed to the admin dashboard,
-                and coordinated integration.
-              </span>
-
-              <ul class="tag-list" aria-label="Technologies used">
+              <ul class="tag-list">
                 <li>PHP</li>
                 <li>MySQL</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>Git</li>
+                <li>JavaScript</li>
               </ul>
 
               <a
                 class="text-link"
-                href="https://github.com/Uttamest/alme-pahiran"
+                href="https://github.com/Uttamest"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View AlMe Pahiran source code on GitHub"
               >
-                View source code
-
+                View on GitHub
                 <svg class="icon icon-sm" aria-hidden="true">
-                  <use href="#i-arrow" />
+                  <use href="#i-arrow"/>
                 </svg>
               </a>
-
             </div>
           </article>
 
-
-          <!-- HOSPITAL SCHEDULING SYSTEM -->
-
+          <!-- HOSPITAL SCHEDULING -->
           <article class="project-card">
-
-            <div class="project-art terminal-art" aria-hidden="true">
-
+            <div class="project-art terminal-art">
               <div class="terminal-preview">
-
                 <div class="terminal-top">
                   <i></i>
                   <i></i>
                   <i></i>
-                  <span>hospital_scheduler.exe</span>
+                  <span>scheduler.py</span>
                 </div>
 
                 <div class="terminal-lines">
+                  <div class="dim"># Hospital scheduling system</div>
 
-                  <div class="teal">
-                    &gt; HOSPITAL SCHEDULING SYSTEM
+                  <div>
+                    <span class="blue">class</span>
+                    <span class="teal">ScheduleManager</span>:
                   </div>
 
-                  <div class="dim">
-                    --------------------------------
-                  </div>
-
-                  <div class="blue">
-                    [1] Manage doctors &amp; patients
-                  </div>
-
-                  <div class="blue">
-                    [2] Schedule appointments
-                  </div>
-
-                  <div class="blue">
-                    [3] View calendars
-                  </div>
-
-                  <div class="blue">
-                    [4] Save and exit
-                  </div>
-
-                  <div class="dim">
-                    --------------------------------
-                  </div>
-
-                  <div class="teal">
-                    &gt; Ready for input_
-                  </div>
-
+                  <div>&nbsp;&nbsp;<span class="blue">def</span> create_schedule(self):</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;staff = load_staff()</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;shifts = organize_shifts()</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;assignments = optimize(staff, shifts)</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">return</span> assignments</div>
+                  <br>
+                  <div class="teal">✓ Schedule processing complete</div>
                 </div>
               </div>
             </div>
 
             <div class="project-info">
-
               <div class="project-meta">
-                Team project
+                <span>Software project</span>
                 <span class="separator">/</span>
-                C++ application
+                <span>Scheduling</span>
               </div>
 
               <h3>Hospital Scheduling System</h3>
 
               <p>
-                A C++ command-line application for managing patient and
-                doctor records, scheduling appointments, checking for
-                conflicts, and saving data through file storage.
+                A scheduling-focused software project exploring
+                structured data management, scheduling logic, and
+                the organization of staff and operational information.
               </p>
 
-              <span class="project-contribution">
-                <span>My role · Team leader:</span>
-                Structured the command-line menus, implemented input
-                validation, managed repository setup, integrated modules,
-                and supported final testing.
-              </span>
-
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>C++17</li>
-                <li>OOP</li>
-                <li>File I/O</li>
-                <li>GitHub</li>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Data Structures</li>
+                <li>Algorithms</li>
+                <li>Problem Solving</li>
               </ul>
 
               <a
                 class="text-link"
-                href="https://github.com/Uttamest/hospital-scheduling-system"
+                href="https://github.com/Uttamest"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View Hospital Scheduling System source code on GitHub"
               >
-                View source code
-
+                View on GitHub
                 <svg class="icon icon-sm" aria-hidden="true">
-                  <use href="#i-arrow" />
+                  <use href="#i-arrow"/>
                 </svg>
               </a>
-
             </div>
           </article>
-
         </div>
 
-
-        <!-- PROJECT IN PROGRESS -->
-
-        <aside
-          class="work-in-progress"
-          aria-label="Project currently in progress"
-        >
-
+        <!-- CURRENT WORK -->
+        <div class="work-in-progress">
           <div>
+            <div class="project-meta">Currently exploring</div>
 
-            <div class="project-meta">
-              Currently exploring
-            </div>
-
-            <h3>International Student Community App</h3>
+            <h3>International Student Living Lab</h3>
 
             <p>
-              A University Living Lab project exploring a mobile experience
-              that helps international students access campus information
-              and connect with one another in South Korea.
+              Exploring practical digital solutions to improve
+              communication, accessibility, and support for
+              international students in university environments.
             </p>
-
           </div>
 
           <span class="progress-label">
-            <i class="status-dot" aria-hidden="true"></i>
+            <span class="status-dot"></span>
             In progress
           </span>
-
-        </aside>
-
+        </div>
       </div>
     </section>
 
-
-    <!-- =========================================
-         ABOUT SECTION
-    ========================================== -->
-
-    <section
-      class="section about-section"
-      id="about"
-      aria-labelledby="about-title"
-    >
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
       <div class="container about-grid">
-
         <div class="about-copy">
+          <span class="section-index">02 / About me</span>
 
-          <span class="section-index">
-            02 / About
-          </span>
-
-          <h2 class="section-title" id="about-title">
-            Curiosity, backed by hands-on work.
+          <h2 class="section-title">
+            Learning with purpose. Building with intention.
           </h2>
 
           <p>
-            Originally from Nepal, I'm studying
-            <strong>Intelligent Computing at Dong-eui University</strong>
-            in Busan, South Korea. I'm interested in the space between
-            writing code and creating software that is genuinely useful.
+            I'm an undergraduate student in
+            <strong>Intelligent Computing</strong> at
+            <strong>Dong-eui University</strong> in Busan, South Korea,
+            originally from Nepal.
           </p>
 
           <p>
-            Through personal projects and university team assignments,
-            I've developed practical experience implementing features,
-            integrating components, and solving the challenges that arise
-            throughout the software development process.
+            My interests include mobile application development,
+            full-stack development, software engineering, and
+            technology-driven problem-solving.
           </p>
 
+          <p>
+            I enjoy turning ideas into practical applications,
+            understanding how systems work, and continuously
+            improving my technical and problem-solving skills.
+          </p>
+
+          <p>
+            Beyond coding, I value collaboration, communication,
+            and learning through real-world projects and experiences.
+          </p>
         </div>
 
-
         <div class="about-points">
-
-          <div class="about-point">
-
-            <span class="point-icon">
+          <article class="about-point">
+            <div class="point-icon">
               <svg class="icon" aria-hidden="true">
-                <use href="#i-code" />
+                <use href="#i-code"/>
               </svg>
-            </span>
-
-            <div>
-              <h3>Practical problem-solving</h3>
-
-              <p>
-                I enjoy breaking real needs into clear, manageable features
-                and building solutions that are useful rather than
-                unnecessarily complex.
-              </p>
             </div>
 
-          </div>
-
-
-          <div class="about-point">
-
-            <span class="point-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-layers" />
-              </svg>
-            </span>
-
             <div>
-              <h3>Collaboration and ownership</h3>
+              <h3>Application Development</h3>
 
               <p>
-                Leading university projects has taught me the value of
-                communication, shared responsibility, and thoughtful
-                integration.
+                Interested in developing responsive web applications
+                and cross-platform mobile experiences using modern
+                development technologies.
               </p>
             </div>
+          </article>
 
-          </div>
-
-
-          <div class="about-point">
-
-            <span class="point-icon">
+          <article class="about-point">
+            <div class="point-icon">
               <svg class="icon" aria-hidden="true">
-                <use href="#i-check" />
+                <use href="#i-layers"/>
               </svg>
-            </span>
+            </div>
 
             <div>
-              <h3>User-centered thinking</h3>
+              <h3>Practical Problem-Solving</h3>
 
               <p>
-                My hospitality experience has strengthened my appreciation
-                for clear interfaces, dependable processes, and understanding
-                people’s needs.
+                Focused on understanding real-world challenges and
+                translating requirements into useful, maintainable
+                software solutions.
               </p>
             </div>
+          </article>
 
-          </div>
+          <article class="about-point">
+            <div class="point-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-book"/>
+              </svg>
+            </div>
 
+            <div>
+              <h3>Continuous Learning</h3>
+
+              <p>
+                Building a strong foundation in programming,
+                algorithms, data structures, and software
+                engineering principles.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-
-    <!-- =========================================
-         SKILLS SECTION
-    ========================================== -->
-
-    <section
-      class="section skills-section"
-      id="skills"
-      aria-labelledby="skills-title"
-    >
+    <!-- SKILLS -->
+    <section class="section skills-section" id="skills">
       <div class="container">
-
         <div class="section-heading">
-
           <div>
+            <span class="section-index">03 / Technical interests</span>
 
-            <span class="section-index">
-              03 / Technical toolkit
-            </span>
-
-            <h2 id="skills-title">
-              Technologies I work with.
-            </h2>
+            <h2>Technologies & skills</h2>
 
             <p>
-              The languages, tools, and technologies I currently work with,
-              along with areas I'm actively exploring.
+              The technologies and areas I work with or am actively
+              exploring as part of my development journey.
             </p>
-
           </div>
-
         </div>
 
-
         <div class="skills-grid">
-
-
-          <!-- PROGRAMMING -->
-
           <article class="skill-card">
-
-            <span class="point-icon">
+            <div class="point-icon">
               <svg class="icon" aria-hidden="true">
-                <use href="#i-code" />
+                <use href="#i-code"/>
               </svg>
-            </span>
+            </div>
 
-            <h3>Programming languages</h3>
+            <h3>Programming</h3>
 
             <p>
-              C++ · Python · JavaScript · PHP
-            </p>
-
-          </article>
-
-
-          <!-- WEB DEVELOPMENT -->
-
-          <article class="skill-card">
-
-            <span class="point-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-layers" />
-              </svg>
-            </span>
-
-            <h3>Web development</h3>
-
-            <p>
-              HTML · CSS · Responsive layouts · Fundamental application architecture
-            </p>
-
-          </article>
-
-
-          <!-- DATABASES AND TOOLS -->
-
-          <article class="skill-card">
-
-            <span class="point-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-database" />
-              </svg>
-            </span>
-
-            <h3>Databases and development tools</h3>
-
-            <p>
-              MySQL · SQLite · Git · GitHub · Visual Studio Code
-            </p>
-
-          </article>
-
-
-          <!-- CURRENTLY LEARNING -->
-
-          <article class="skill-card">
-
-            <span class="point-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-book" />
-              </svg>
-            </span>
-
-            <h3>Currently learning</h3>
-
-            <p>
-              React Native · Flutter · Mobile UI/UX
+              Python, JavaScript, PHP, and programming fundamentals.
             </p>
 
             <span class="skill-note">
-              Areas of active learning and exploration
+              Logic, problem-solving, and clean code.
             </span>
-
           </article>
 
+          <article class="skill-card">
+            <div class="point-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-layers"/>
+              </svg>
+            </div>
+
+            <h3>Web Development</h3>
+
+            <p>
+              HTML, CSS, JavaScript, responsive interfaces,
+              and PHP-based development.
+            </p>
+
+            <span class="skill-note">
+              Front-end and full-stack foundations.
+            </span>
+          </article>
+
+          <article class="skill-card">
+            <div class="point-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-database"/>
+              </svg>
+            </div>
+
+            <h3>Databases</h3>
+
+            <p>
+              MySQL, relational database concepts, and
+              structured data management.
+            </p>
+
+            <span class="skill-note">
+              Data organization and persistence.
+            </span>
+          </article>
+
+          <article class="skill-card">
+            <div class="point-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-book"/>
+              </svg>
+            </div>
+
+            <h3>Currently Exploring</h3>
+
+            <p>
+              React Native, Flutter, application architecture,
+              and software engineering.
+            </p>
+
+            <span class="skill-note">
+              Expanding practical development experience.
+            </span>
+          </article>
         </div>
       </div>
     </section>
 
-
-    <!-- =========================================
-         EXPERIENCE SECTION
-    ========================================== -->
-
-    <section
-      class="section experience-section"
-      id="experience"
-      aria-labelledby="experience-title"
-    >
+    <!-- EDUCATION & EXPERIENCE -->
+    <section class="section experience-section" id="experience">
       <div class="container">
-
         <div class="section-heading">
-
           <div>
+            <span class="section-index">04 / Background</span>
 
-            <span class="section-index">
-              04 / Background
-            </span>
-
-            <h2 id="experience-title">
-              Education and experience.
-            </h2>
+            <h2>Education & experience</h2>
 
             <p>
-              My academic background, collaborative project work,
-              and practical experience in a customer-facing role.
+              My academic journey, practical experience,
+              and involvement beyond the classroom.
             </p>
-
           </div>
-
         </div>
 
-
         <div class="experience-grid">
-
-
-          <!-- EDUCATION -->
-
           <article class="experience-card">
+            <span class="experience-category">Education</span>
 
-            <span class="experience-category">
-              Education
-            </span>
-
-            <h3>
-              Intelligent Computing Undergraduate
-            </h3>
+            <h3>Bachelor's Degree in Intelligent Computing</h3>
 
             <p class="experience-place">
               Dong-eui University · Busan, South Korea
             </p>
 
             <p>
-              Building a foundation in programming, computing concepts,
-              data structures, and software development while applying
-              these skills through individual and collaborative projects.
+              Studying computing, programming, software development,
+              data structures, algorithms, and foundational
+              computer science concepts.
             </p>
-
           </article>
 
-
-          <!-- WORK EXPERIENCE -->
-
           <article class="experience-card">
+            <span class="experience-category">Professional experience</span>
 
-            <span class="experience-category">
-              Work experience
-            </span>
-
-            <h3>
-              Hospitality and Front Desk Operations
-            </h3>
+            <h3>Hotel Front Desk Operations</h3>
 
             <p class="experience-place">
-              South Korea
+              Hospitality · Busan, South Korea
             </p>
 
             <p>
-              Handled reservations, day-to-day property-management workflows,
-              and guest communication. This experience has strengthened
-              my attention to detail and my appreciation for clear,
-              reliable, user-focused services.
+              Experience in guest communication, reservations,
+              check-in and check-out operations, administrative
+              tasks, and handling day-to-day operational
+              responsibilities in a service environment.
             </p>
-
           </article>
 
+          <article class="experience-card">
+            <span class="experience-category">University involvement</span>
+
+            <h3>Student Representative</h3>
+
+            <p class="experience-place">
+              Intelligent Computing · Dong-eui University
+            </p>
+
+            <p>
+              Supporting communication among students,
+              coordinating class-related information,
+              and contributing to student activities.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-category">Community & activities</span>
+
+            <h3>University Promotional Activities</h3>
+
+            <p class="experience-place">
+              B·RISE / Global PR Activities
+            </p>
+
+            <p>
+              Participating in university-related promotional
+              activities and developing communication,
+              collaboration, and content-related skills.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-
-    <!-- =========================================
-         CONTACT SECTION
-    ========================================== -->
-
-    <section
-      class="contact-section"
-      id="contact"
-      aria-labelledby="contact-title"
-    >
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
       <div class="container">
-
         <div class="contact-card">
-
           <div class="contact-copy">
+            <span class="section-index">05 / Get in touch</span>
 
-            <span class="section-index">
-              05 / Get in touch
-            </span>
-
-            <h2 id="contact-title">
-              Let's create something meaningful.
+            <h2>
+              Let's build something meaningful.
             </h2>
 
             <p>
-              I'm open to connecting with fellow developers, discussing
-              project ideas, and exploring internship or collaboration
-              opportunities.
+              I'm interested in connecting with developers,
+              collaborating on practical projects, exchanging
+              ideas, and exploring opportunities to learn
+              and grow through technology.
             </p>
-
           </div>
 
-
           <div class="contact-actions">
-
             <a
               class="button button-primary"
-              href="mailto:uttamnitro5@gmail.com"
+              href="mailto:YOUR_EMAIL@example.com"
             >
               <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-mail" />
+                <use href="#i-mail"/>
               </svg>
-
               Send me an email
-
-              <svg class="icon icon-sm" aria-hidden="true">
-                <use href="#i-arrow" />
-              </svg>
             </a>
 
-            <div class="social-links" aria-label="Social profiles">
-
+            <div class="social-links">
               <a
                 href="https://github.com/Uttamest"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub profile"
               >
-                GitHub ↗
+                GitHub
               </a>
 
               <a
-                href="https://www.linkedin.com/in/mruttam/"
+                href="YOUR_LINKEDIN_URL"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
               >
-                LinkedIn ↗
+                LinkedIn
               </a>
-
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
 
-
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
-
+  <!-- FOOTER -->
   <footer class="footer">
-
     <div class="container footer-inner">
-
       <span>
-        © <span id="copyright-year">2026</span>
-        Uttam Shrestha. All rights reserved.
+        © <span id="current-year"></span> Uttam Shrestha.
+        Designed and developed with care.
       </span>
 
-      <span>
-        Built with HTML, CSS, and JavaScript ·
-
-        <a
-          href="https://github.com/Uttamest"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub ↗
-        </a>
-      </span>
-
+      <a href="#top">
+        Back to top ↑
+      </a>
     </div>
-
   </footer>
 
-
-  <!-- =========================================
-       JAVASCRIPT
-  ========================================== -->
-
+  <!-- JAVASCRIPT -->
   <script>
     (() => {
-      'use strict';
+      "use strict";
 
       const root = document.documentElement;
 
-      const themeButton = document.querySelector('#theme-toggle');
-      const menuButton = document.querySelector('#menu-toggle');
-      const navigation = document.querySelector('#site-nav');
-
-      const yearElement = document.querySelector('#copyright-year');
-      const themeColor = document.querySelector('meta[name="theme-color"]');
-
-      const navigationLinks = navigation
-        ? [...navigation.querySelectorAll('a[href^="#"]')]
-        : [];
-
-
-      /* =========================================
-         DYNAMIC COPYRIGHT YEAR
-      ========================================== */
-
-      if (yearElement) {
-        yearElement.textContent = String(new Date().getFullYear());
-      }
-
+      const themeToggle = document.getElementById("theme-toggle");
+      const menuToggle = document.getElementById("menu-toggle");
+      const siteNav = document.getElementById("site-nav");
+      const currentYear = document.getElementById("current-year");
 
       /* =========================================
          THEME MANAGEMENT
-      ========================================== */
+      ========================================= */
 
-      function syncThemeControls() {
-
-        const isLight = root.dataset.theme === 'light';
-
-        if (themeButton) {
-
-          themeButton.setAttribute(
-            'aria-pressed',
-            String(isLight)
-          );
-
-          themeButton.setAttribute(
-            'aria-label',
-            isLight
-              ? 'Switch to dark theme'
-              : 'Switch to light theme'
-          );
-
-          themeButton.setAttribute(
-            'title',
-            isLight
-              ? 'Switch to dark theme'
-              : 'Switch to light theme'
-          );
+      const getSavedTheme = () => {
+        try {
+          return localStorage.getItem("uttam-theme");
+        } catch (_) {
+          return null;
         }
+      };
 
-        if (themeColor) {
-
-          themeColor.setAttribute(
-            'content',
-            isLight ? '#f6f8f5' : '#0b1118'
-          );
+      const saveTheme = (theme) => {
+        try {
+          localStorage.setItem("uttam-theme", theme);
+        } catch (_) {
+          // Theme switching still works without storage.
         }
+      };
+
+      const applyTheme = (theme) => {
+        root.dataset.theme = theme;
+
+        const isLight = theme === "light";
+
+        themeToggle?.setAttribute(
+          "aria-label",
+          isLight ? "Switch to dark theme" : "Switch to light theme"
+        );
+
+        themeToggle?.setAttribute(
+          "aria-pressed",
+          String(isLight)
+        );
+
+        const themeColor = isLight ? "#f7f9f5" : "#101512";
+
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", themeColor);
+
+        saveTheme(theme);
+      };
+
+      const initialTheme = getSavedTheme();
+
+      if (initialTheme === "light" || initialTheme === "dark") {
+        applyTheme(initialTheme);
+      } else {
+        applyTheme("dark");
       }
 
+      themeToggle?.addEventListener("click", () => {
+        const nextTheme =
+          root.dataset.theme === "dark" ? "light" : "dark";
 
-      // Synchronize the initial theme.
-
-      syncThemeControls();
-
-
-      // Handle theme switching.
-
-      if (themeButton) {
-
-        themeButton.addEventListener('click', () => {
-
-          const nextTheme =
-            root.dataset.theme === 'light'
-              ? 'dark'
-              : 'light';
-
-          root.dataset.theme = nextTheme;
-
-          try {
-
-            localStorage.setItem(
-              'uttam-theme',
-              nextTheme
-            );
-
-          } catch (_) {
-
-            // Theme switching remains available for the current session.
-          }
-
-          syncThemeControls();
-
-        });
-      }
-
+        applyTheme(nextTheme);
+      });
 
       /* =========================================
          MOBILE NAVIGATION
-      ========================================== */
+      ========================================= */
 
-      function closeMenu({ returnFocus = false } = {}) {
+      const closeMenu = () => {
+        siteNav?.classList.remove("is-open");
 
-        if (!navigation || !menuButton) return;
+        menuToggle?.setAttribute("aria-expanded", "false");
+        menuToggle?.setAttribute("aria-label", "Open navigation menu");
+      };
 
-        navigation.classList.remove('is-open');
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("is-open");
 
-        menuButton.setAttribute(
-          'aria-expanded',
-          'false'
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
         );
+      });
 
-        menuButton.setAttribute(
-          'aria-label',
-          'Open navigation menu'
-        );
+      siteNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
 
-        if (returnFocus) {
-          menuButton.focus();
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
         }
-      }
+      });
 
+      document.addEventListener("click", (event) => {
+        if (
+          siteNav?.classList.contains("is-open") &&
+          !siteNav.contains(event.target) &&
+          !menuToggle?.contains(event.target)
+        ) {
+          closeMenu();
+        }
+      });
 
-      if (menuButton && navigation) {
-
-        // Toggle the mobile menu.
-
-        menuButton.addEventListener('click', () => {
-
-          const shouldOpen =
-            menuButton.getAttribute('aria-expanded') !== 'true';
-
-          navigation.classList.toggle(
-            'is-open',
-            shouldOpen
-          );
-
-          menuButton.setAttribute(
-            'aria-expanded',
-            String(shouldOpen)
-          );
-
-          menuButton.setAttribute(
-            'aria-label',
-            shouldOpen
-              ? 'Close navigation menu'
-              : 'Open navigation menu'
-          );
-
-        });
-
-
-        // Close the menu when a navigation link is selected.
-
-        navigationLinks.forEach((link) => {
-
-          link.addEventListener('click', () => {
-            closeMenu();
-          });
-
-        });
-
-
-        // Close the menu when the Escape key is pressed.
-
-        document.addEventListener('keydown', (event) => {
-
-          if (
-            event.key === 'Escape' &&
-            navigation.classList.contains('is-open')
-          ) {
-
-            closeMenu({
-              returnFocus: true
-            });
-
-          }
-
-        });
-
-
-        // Close the menu when clicking outside it.
-
-        document.addEventListener('click', (event) => {
-
-          const target = event.target;
-
-          if (
-            target instanceof Node &&
-            !navigation.contains(target) &&
-            !menuButton.contains(target)
-          ) {
-
-            closeMenu();
-
-          }
-
-        });
-
-
-        // Close the mobile menu when returning to desktop width.
-
-        window.addEventListener(
-          'resize',
-          () => {
-
-            if (window.innerWidth > 660) {
-              closeMenu();
-            }
-
-          },
-          { passive: true }
-        );
-
-      }
-
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 660) {
+          closeMenu();
+        }
+      });
 
       /* =========================================
-         ACTIVE NAVIGATION HIGHLIGHTING
-      ========================================== */
+         ACTIVE NAVIGATION
+      ========================================= */
 
-      if (
-        'IntersectionObserver' in window &&
-        navigationLinks.length
-      ) {
+      const sections = document.querySelectorAll(
+        "main section[id]"
+      );
 
-        const sections = navigationLinks
-          .map((link) => {
+      const navLinks = document.querySelectorAll(
+        ".nav-links a"
+      );
 
-            return document.querySelector(
-              link.getAttribute('href')
-            );
-
-          })
-          .filter(Boolean);
-
-
+      if ("IntersectionObserver" in window) {
         const sectionObserver = new IntersectionObserver(
-
           (entries) => {
-
             entries.forEach((entry) => {
-
               if (!entry.isIntersecting) return;
 
-              navigationLinks.forEach((link) => {
+              const sectionId = entry.target.id;
 
+              navLinks.forEach((link) => {
                 const isCurrent =
-                  link.getAttribute('href') ===
-                  `#${entry.target.id}`;
+                  link.getAttribute("href") === `#${sectionId}`;
 
                 if (isCurrent) {
-
-                  link.setAttribute(
-                    'aria-current',
-                    'location'
-                  );
-
+                  link.setAttribute("aria-current", "location");
                 } else {
-
-                  link.removeAttribute(
-                    'aria-current'
-                  );
-
+                  link.removeAttribute("aria-current");
                 }
-
               });
-
             });
-
           },
-
           {
-            rootMargin: '-25% 0px -60% 0px',
+            rootMargin: "-30% 0px -60% 0px",
             threshold: 0
           }
-
         );
 
-
-        // Observe each main section.
-
         sections.forEach((section) => {
-
           sectionObserver.observe(section);
-
         });
+      }
 
+      /* =========================================
+         DYNAMIC COPYRIGHT YEAR
+      ========================================= */
+
+      if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
       }
 
     })();
   </script>
-
 </body>
 </html>
